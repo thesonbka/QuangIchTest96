@@ -32,6 +32,7 @@ namespace QuangIchTest.DanhMuc.Form2
         }
         private void LoadDataControl(DataTable data)
         {
+            //abc
             string IDTruong = data.Rows[0]["ID_TRUONG"].ToString();
             rcbDiemTruong.DataSource = dbaProvider.ExecuteCommand(String.Format(Form2Command.queryComboboxDiemtruong,IDTruong ));
             rcbDiemTruong.DataBind();
