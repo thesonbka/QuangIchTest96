@@ -19,6 +19,7 @@ namespace QuangIchTest.DanhMuc.Form2
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            //aa
             if (!IsPostBack)
             {
                 string itemID = Request["ID"].ToString();
