@@ -19,6 +19,7 @@ namespace QuangIchTest.DanhMuc.Form2
         
         protected void Page_Load(object sender, EventArgs e)
         {
+            //afsff
             if (!IsPostBack)
             {
                 string itemID = Request["ID"].ToString();
@@ -32,6 +33,7 @@ namespace QuangIchTest.DanhMuc.Form2
         }
         private void LoadDataControl(DataTable data)
         {
+            //abc
             string IDTruong = data.Rows[0]["ID_TRUONG"].ToString();
             rcbDiemTruong.DataSource = dbaProvider.ExecuteCommand(String.Format(Form2Command.queryComboboxDiemtruong,IDTruong ));
             rcbDiemTruong.DataBind();
