@@ -43,14 +43,39 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
+                        
                         <li>
-                            <a href="#">About</a>
+                            <a href="/DanhMuc/Form1/index.aspx">Form1</a>
                         </li>
                         <li>
-                            <a href="#services">Services</a>
+                          <a href="/DanhMuc/Form2/index.aspx">Form2</a>
+                         </li>
+                        <li>
+                            <a href="/DanhMuc/Form3/index.aspx">Form3</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="/DanhMuc/Form4/index.aspx">Form4</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form5/index.aspx">Form5</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form6/index.aspx">Form6</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form7/index.aspx">Form7</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form8/index.aspx">Form8</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form9/index.aspx">Form9</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form10/index.aspx">Form10</a>
+                        </li>
+                        <li>
+                            <a href="/DanhMuc/Form11/index.aspx">Form11</a>
                         </li>
                     </ul>
                 </div>

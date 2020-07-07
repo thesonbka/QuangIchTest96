@@ -13,9 +13,7 @@ namespace QuangIchTest
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            string query = "Select Ten from docgia";
-            DbAcessProvider dbaProvider = new DbAcessProvider();
-			DataTable dtData = dbaProvider.ExecuteCommandHome(query);
+           
 
         }
 	}

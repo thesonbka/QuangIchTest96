@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38e63b78144d4327b5a5273e481d0bfa" Name="Diagram1">
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_CAP_HOC" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_MON_HOC" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.LOP" Width="1.5" PointX="3" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.LOP_MON" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DM_CAP_HOC" ManuallyRouted="false" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_MON_HOC_CAP_HOC_DM_CAP_HOC" ManuallyRouted="false" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_DM_MON_HOC" ManuallyRouted="false" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_LOP" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

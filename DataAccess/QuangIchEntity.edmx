@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BO_GIAO_DUC_TEMPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DM_CAP_HOC">
+          <Key>
+            <PropertyRef Name="MA" />
+          </Key>
+          <Property Name="MA" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="THU_TU" Type="int" />
+          <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+          <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="DM_MON_HOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MA" Type="nvarchar" MaxLength="20" />
+          <Property Name="TEN" Type="nvarchar" MaxLength="150" />
+          <Property Name="MA_CAP_HOC" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_NAM_HOC" Type="int" />
+          <Property Name="KIEU_MON_HOC" Type="int" />
+          <Property Name="IS_MON_TC" Type="int" />
+          <Property Name="THU_TU" Type="int" />
+          <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+          <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MA_SO_GD" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID_PHONG_GD" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_TRUONG" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_TRUONG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MA" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MA_NAM_HOC" Type="int" Nullable="false" />
+          <Property Name="MA_CAP_HOC" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_DIEM_TRUONG" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_DIEM_TRUONG" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_GIAO_VIEN_CHU_NHIEM" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_HINH_THUC_DAO_TAO_HOC_TAP" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_KIEU_LOP" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_LOP_DAO_TAO_BOI_DUONG" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_LOP_HUONG_NGHIEP_DAY_NGHE" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_KHOI" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_PHAN_BAN" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_DANH_MUC_TIET_HOC" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_DANH_MUC_NGOAI_NGU" Type="nvarchar" MaxLength="20" />
+          <Property Name="TEN" Type="nvarchar" MaxLength="50" />
+          <Property Name="IS_DAY_2_BUOI_NGAY" Type="int" />
+          <Property Name="IS_LOP_CHUYEN" Type="int" />
+          <Property Name="IS_LOP_GHEP" Type="int" />
+          <Property Name="IS_BAN_TRU" Type="int" />
+          <Property Name="IS_HOC_5_BUOI_TUAN" Type="int" />
+          <Property Name="IS_HOC_6_8_BUOI_TUAN" Type="int" />
+          <Property Name="IS_HOC_9_10_BUOI_TUAN" Type="int" />
+          <Property Name="IS_TBDH_TVIET" Type="int" />
+          <Property Name="IS_TBDH_TOAN" Type="int" />
+          <Property Name="IS_DAI_DIEN_CHA_ME_LOP" Type="int" />
+          <Property Name="IS_DAI_DIEN_CHA_ME_TRUONG" Type="int" />
+          <Property Name="ID_GIAO_VIEN_CHU_NHIEM" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="THU_TU" Type="int" />
+          <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+          <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="datetime" />
+          <Property Name="TRANG_THAI" Type="int" />
+          <Property Name="IS_CO_HOC_SINH_HOC_NGHE" Type="int" />
+          <Property Name="IS_LOP_CHUYEN_BIET" Type="int" />
+          <Property Name="IS_LOP_CO_TRE_KHUYET_TAT" Type="int" />
+          <Property Name="ISVNEN" Type="int" />
+          <Property Name="MA_NHOM_TUOI_MN" Type="nvarchar" MaxLength="20" />
+          <Property Name="MA_HE_CHUYEN" Type="nvarchar" MaxLength="20" />
+          <Property Name="IS_LOP_GHEP_2_TUOI" Type="int" />
+          <Property Name="IS_LOP_GHEP_3_TUOI" Type="int" />
+          <Property Name="MA_DANH_MUC_NGOAI_NGU_2" Type="nvarchar" MaxLength="20" />
+          <Property Name="IS_CTGDMN_MOI" Type="int" />
+          <Property Name="IS_CT_CSGD" Type="int" />
+          <Property Name="MA_SO_TIET_NGOAI_NGU" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_LOP_GHEP" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="LOP_MON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MA_NAM_HOC" Type="int" Nullable="false" />
+          <Property Name="MA_SO_GD" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID_PHONG_GD" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_TRUONG" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MA_TRUONG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ID_LOP" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MON_HOC" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_MON_HOC" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="HOC_KY" Type="int" Nullable="false" />
+          <Property Name="ID_GIAO_VIEN_BO_MON" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_GIAO_VIEN_BO_MON" Type="nvarchar" MaxLength="20" />
+          <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+          <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="datetime" />
+          <Property Name="TRANG_THAI" Type="int" />
+        </EntityType>
+        <Association Name="FK_LOP_DM_CAP_HOC">
+          <End Role="DM_CAP_HOC" Type="Self.DM_CAP_HOC" Multiplicity="0..1" />
+          <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_CAP_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="MA_CAP_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_MON_DM_MON_HOC">
+          <End Role="DM_MON_HOC" Type="Self.DM_MON_HOC" Multiplicity="0..1" />
+          <End Role="LOP_MON" Type="Self.LOP_MON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_MON_HOC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP_MON">
+              <PropertyRef Name="ID_MON_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_MON_LOP">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="LOP_MON" Type="Self.LOP_MON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP_MON">
+              <PropertyRef Name="ID_LOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MON_HOC_CAP_HOC_DM_CAP_HOC">
+          <End Role="DM_CAP_HOC" Type="Self.DM_CAP_HOC" Multiplicity="0..1" />
+          <End Role="DM_MON_HOC" Type="Self.DM_MON_HOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_CAP_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DM_MON_HOC">
+              <PropertyRef Name="MA_CAP_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BO_GIAO_DUC_TEMPModelStoreContainer">
+          <EntitySet Name="DM_CAP_HOC" EntityType="Self.DM_CAP_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_MON_HOC" EntityType="Self.DM_MON_HOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOP" EntityType="Self.LOP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOP_MON" EntityType="Self.LOP_MON" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LOP_DM_CAP_HOC" Association="Self.FK_LOP_DM_CAP_HOC">
+            <End Role="DM_CAP_HOC" EntitySet="DM_CAP_HOC" />
+            <End Role="LOP" EntitySet="LOP" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_MON_DM_MON_HOC" Association="Self.FK_LOP_MON_DM_MON_HOC">
+            <End Role="DM_MON_HOC" EntitySet="DM_MON_HOC" />
+            <End Role="LOP_MON" EntitySet="LOP_MON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_MON_LOP" Association="Self.FK_LOP_MON_LOP">
+            <End Role="LOP" EntitySet="LOP" />
+            <End Role="LOP_MON" EntitySet="LOP_MON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MON_HOC_CAP_HOC_DM_CAP_HOC" Association="Self.FK_MON_HOC_CAP_HOC_DM_CAP_HOC">
+            <End Role="DM_CAP_HOC" EntitySet="DM_CAP_HOC" />
+            <End Role="DM_MON_HOC" EntitySet="DM_MON_HOC" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BO_GIAO_DUC_TEMPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DM_CAP_HOC">
+          <Key>
+            <PropertyRef Name="MA" />
+          </Key>
+          <Property Name="MA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="THU_TU" Type="Int32" />
+          <Property Name="NGUOI_TAO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="LOPs" Relationship="Self.FK_LOP_DM_CAP_HOC" FromRole="DM_CAP_HOC" ToRole="LOP" />
+          <NavigationProperty Name="DM_MON_HOC" Relationship="Self.FK_MON_HOC_CAP_HOC_DM_CAP_HOC" FromRole="DM_CAP_HOC" ToRole="DM_MON_HOC" />
+        </EntityType>
+        <EntityType Name="DM_MON_HOC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TEN" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="MA_CAP_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_NAM_HOC" Type="Int32" />
+          <Property Name="KIEU_MON_HOC" Type="Int32" />
+          <Property Name="IS_MON_TC" Type="Int32" />
+          <Property Name="THU_TU" Type="Int32" />
+          <Property Name="NGUOI_TAO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DM_CAP_HOC" Relationship="Self.FK_MON_HOC_CAP_HOC_DM_CAP_HOC" FromRole="DM_MON_HOC" ToRole="DM_CAP_HOC" />
+          <NavigationProperty Name="LOP_MON" Relationship="Self.FK_LOP_MON_DM_MON_HOC" FromRole="DM_MON_HOC" ToRole="LOP_MON" />
+        </EntityType>
+        <EntityType Name="LOP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MA_SO_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_PHONG_GD" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TRUONG" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_TRUONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MA_NAM_HOC" Type="Int32" Nullable="false" />
+          <Property Name="MA_CAP_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_DIEM_TRUONG" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_DIEM_TRUONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_GIAO_VIEN_CHU_NHIEM" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_HINH_THUC_DAO_TAO_HOC_TAP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_KIEU_LOP" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_LOP_DAO_TAO_BOI_DUONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_LOP_HUONG_NGHIEP_DAY_NGHE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_KHOI" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_PHAN_BAN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_DANH_MUC_TIET_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_DANH_MUC_NGOAI_NGU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IS_DAY_2_BUOI_NGAY" Type="Int32" />
+          <Property Name="IS_LOP_CHUYEN" Type="Int32" />
+          <Property Name="IS_LOP_GHEP" Type="Int32" />
+          <Property Name="IS_BAN_TRU" Type="Int32" />
+          <Property Name="IS_HOC_5_BUOI_TUAN" Type="Int32" />
+          <Property Name="IS_HOC_6_8_BUOI_TUAN" Type="Int32" />
+          <Property Name="IS_HOC_9_10_BUOI_TUAN" Type="Int32" />
+          <Property Name="IS_TBDH_TVIET" Type="Int32" />
+          <Property Name="IS_TBDH_TOAN" Type="Int32" />
+          <Property Name="IS_DAI_DIEN_CHA_ME_LOP" Type="Int32" />
+          <Property Name="IS_DAI_DIEN_CHA_ME_TRUONG" Type="Int32" />
+          <Property Name="ID_GIAO_VIEN_CHU_NHIEM" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="THU_TU" Type="Int32" />
+          <Property Name="NGUOI_TAO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
+          <Property Name="TRANG_THAI" Type="Int32" />
+          <Property Name="IS_CO_HOC_SINH_HOC_NGHE" Type="Int32" />
+          <Property Name="IS_LOP_CHUYEN_BIET" Type="Int32" />
+          <Property Name="IS_LOP_CO_TRE_KHUYET_TAT" Type="Int32" />
+          <Property Name="ISVNEN" Type="Int32" />
+          <Property Name="MA_NHOM_TUOI_MN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA_HE_CHUYEN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IS_LOP_GHEP_2_TUOI" Type="Int32" />
+          <Property Name="IS_LOP_GHEP_3_TUOI" Type="Int32" />
+          <Property Name="MA_DANH_MUC_NGOAI_NGU_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IS_CTGDMN_MOI" Type="Int32" />
+          <Property Name="IS_CT_CSGD" Type="Int32" />
+          <Property Name="MA_SO_TIET_NGOAI_NGU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_LOP_GHEP" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="DM_CAP_HOC" Relationship="Self.FK_LOP_DM_CAP_HOC" FromRole="LOP" ToRole="DM_CAP_HOC" />
+          <NavigationProperty Name="LOP_MON" Relationship="Self.FK_LOP_MON_LOP" FromRole="LOP" ToRole="LOP_MON" />
+        </EntityType>
+        <EntityType Name="LOP_MON">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MA_NAM_HOC" Type="Int32" Nullable="false" />
+          <Property Name="MA_SO_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_PHONG_GD" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TRUONG" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MA_TRUONG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_LOP" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_MON_HOC" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_MON_HOC" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HOC_KY" Type="Int32" Nullable="false" />
+          <Property Name="ID_GIAO_VIEN_BO_MON" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_GIAO_VIEN_BO_MON" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="NGUOI_TAO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
+          <Property Name="TRANG_THAI" Type="Int32" />
+          <NavigationProperty Name="DM_MON_HOC" Relationship="Self.FK_LOP_MON_DM_MON_HOC" FromRole="LOP_MON" ToRole="DM_MON_HOC" />
+          <NavigationProperty Name="LOP" Relationship="Self.FK_LOP_MON_LOP" FromRole="LOP_MON" ToRole="LOP" />
+        </EntityType>
+        <Association Name="FK_LOP_DM_CAP_HOC">
+          <End Role="DM_CAP_HOC" Type="Self.DM_CAP_HOC" Multiplicity="0..1" />
+          <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_CAP_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="MA_CAP_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MON_HOC_CAP_HOC_DM_CAP_HOC">
+          <End Role="DM_CAP_HOC" Type="Self.DM_CAP_HOC" Multiplicity="0..1" />
+          <End Role="DM_MON_HOC" Type="Self.DM_MON_HOC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_CAP_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DM_MON_HOC">
+              <PropertyRef Name="MA_CAP_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_MON_DM_MON_HOC">
+          <End Role="DM_MON_HOC" Type="Self.DM_MON_HOC" Multiplicity="0..1" />
+          <End Role="LOP_MON" Type="Self.LOP_MON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DM_MON_HOC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP_MON">
+              <PropertyRef Name="ID_MON_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_MON_LOP">
+          <End Role="LOP" Type="Self.LOP" Multiplicity="1" />
+          <End Role="LOP_MON" Type="Self.LOP_MON" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOP">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP_MON">
+              <PropertyRef Name="ID_LOP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BO_GIAO_DUC_TEMPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DM_CAP_HOC" EntityType="Self.DM_CAP_HOC" />
+          <EntitySet Name="DM_MON_HOC" EntityType="Self.DM_MON_HOC" />
+          <EntitySet Name="LOPs" EntityType="Self.LOP" />
+          <EntitySet Name="LOP_MON" EntityType="Self.LOP_MON" />
+          <AssociationSet Name="FK_LOP_DM_CAP_HOC" Association="Self.FK_LOP_DM_CAP_HOC">
+            <End Role="DM_CAP_HOC" EntitySet="DM_CAP_HOC" />
+            <End Role="LOP" EntitySet="LOPs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MON_HOC_CAP_HOC_DM_CAP_HOC" Association="Self.FK_MON_HOC_CAP_HOC_DM_CAP_HOC">
+            <End Role="DM_CAP_HOC" EntitySet="DM_CAP_HOC" />
+            <End Role="DM_MON_HOC" EntitySet="DM_MON_HOC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_MON_DM_MON_HOC" Association="Self.FK_LOP_MON_DM_MON_HOC">
+            <End Role="DM_MON_HOC" EntitySet="DM_MON_HOC" />
+            <End Role="LOP_MON" EntitySet="LOP_MON" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_MON_LOP" Association="Self.FK_LOP_MON_LOP">
+            <End Role="LOP" EntitySet="LOPs" />
+            <End Role="LOP_MON" EntitySet="LOP_MON" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BO_GIAO_DUC_TEMPModelStoreContainer" CdmEntityContainer="BO_GIAO_DUC_TEMPEntities">
+          <EntitySetMapping Name="DM_CAP_HOC">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.DM_CAP_HOC">
+              <MappingFragment StoreEntitySet="DM_CAP_HOC">
+                <ScalarProperty Name="MA" ColumnName="MA" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="THU_TU" ColumnName="THU_TU" />
+                <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+                <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_MON_HOC">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.DM_MON_HOC">
+              <MappingFragment StoreEntitySet="DM_MON_HOC">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="MA_CAP_HOC" ColumnName="MA_CAP_HOC" />
+                <ScalarProperty Name="MA_NAM_HOC" ColumnName="MA_NAM_HOC" />
+                <ScalarProperty Name="KIEU_MON_HOC" ColumnName="KIEU_MON_HOC" />
+                <ScalarProperty Name="IS_MON_TC" ColumnName="IS_MON_TC" />
+                <ScalarProperty Name="THU_TU" ColumnName="THU_TU" />
+                <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+                <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOPs">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.LOP">
+              <MappingFragment StoreEntitySet="LOP">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MA_SO_GD" ColumnName="MA_SO_GD" />
+                <ScalarProperty Name="ID_PHONG_GD" ColumnName="ID_PHONG_GD" />
+                <ScalarProperty Name="MA_PHONG_GD" ColumnName="MA_PHONG_GD" />
+                <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
+                <ScalarProperty Name="MA_TRUONG" ColumnName="MA_TRUONG" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+                <ScalarProperty Name="MA_NAM_HOC" ColumnName="MA_NAM_HOC" />
+                <ScalarProperty Name="MA_CAP_HOC" ColumnName="MA_CAP_HOC" />
+                <ScalarProperty Name="ID_DIEM_TRUONG" ColumnName="ID_DIEM_TRUONG" />
+                <ScalarProperty Name="MA_DIEM_TRUONG" ColumnName="MA_DIEM_TRUONG" />
+                <ScalarProperty Name="MA_GIAO_VIEN_CHU_NHIEM" ColumnName="MA_GIAO_VIEN_CHU_NHIEM" />
+                <ScalarProperty Name="MA_HINH_THUC_DAO_TAO_HOC_TAP" ColumnName="MA_HINH_THUC_DAO_TAO_HOC_TAP" />
+                <ScalarProperty Name="MA_KIEU_LOP" ColumnName="MA_KIEU_LOP" />
+                <ScalarProperty Name="MA_LOP_DAO_TAO_BOI_DUONG" ColumnName="MA_LOP_DAO_TAO_BOI_DUONG" />
+                <ScalarProperty Name="MA_LOP_HUONG_NGHIEP_DAY_NGHE" ColumnName="MA_LOP_HUONG_NGHIEP_DAY_NGHE" />
+                <ScalarProperty Name="MA_KHOI" ColumnName="MA_KHOI" />
+                <ScalarProperty Name="MA_PHAN_BAN" ColumnName="MA_PHAN_BAN" />
+                <ScalarProperty Name="MA_DANH_MUC_TIET_HOC" ColumnName="MA_DANH_MUC_TIET_HOC" />
+                <ScalarProperty Name="MA_DANH_MUC_NGOAI_NGU" ColumnName="MA_DANH_MUC_NGOAI_NGU" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="IS_DAY_2_BUOI_NGAY" ColumnName="IS_DAY_2_BUOI_NGAY" />
+                <ScalarProperty Name="IS_LOP_CHUYEN" ColumnName="IS_LOP_CHUYEN" />
+                <ScalarProperty Name="IS_LOP_GHEP" ColumnName="IS_LOP_GHEP" />
+                <ScalarProperty Name="IS_BAN_TRU" ColumnName="IS_BAN_TRU" />
+                <ScalarProperty Name="IS_HOC_5_BUOI_TUAN" ColumnName="IS_HOC_5_BUOI_TUAN" />
+                <ScalarProperty Name="IS_HOC_6_8_BUOI_TUAN" ColumnName="IS_HOC_6_8_BUOI_TUAN" />
+                <ScalarProperty Name="IS_HOC_9_10_BUOI_TUAN" ColumnName="IS_HOC_9_10_BUOI_TUAN" />
+                <ScalarProperty Name="IS_TBDH_TVIET" ColumnName="IS_TBDH_TVIET" />
+                <ScalarProperty Name="IS_TBDH_TOAN" ColumnName="IS_TBDH_TOAN" />
+                <ScalarProperty Name="IS_DAI_DIEN_CHA_ME_LOP" ColumnName="IS_DAI_DIEN_CHA_ME_LOP" />
+                <ScalarProperty Name="IS_DAI_DIEN_CHA_ME_TRUONG" ColumnName="IS_DAI_DIEN_CHA_ME_TRUONG" />
+                <ScalarProperty Name="ID_GIAO_VIEN_CHU_NHIEM" ColumnName="ID_GIAO_VIEN_CHU_NHIEM" />
+                <ScalarProperty Name="THU_TU" ColumnName="THU_TU" />
+                <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+                <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+                <ScalarProperty Name="TRANG_THAI" ColumnName="TRANG_THAI" />
+                <ScalarProperty Name="IS_CO_HOC_SINH_HOC_NGHE" ColumnName="IS_CO_HOC_SINH_HOC_NGHE" />
+                <ScalarProperty Name="IS_LOP_CHUYEN_BIET" ColumnName="IS_LOP_CHUYEN_BIET" />
+                <ScalarProperty Name="IS_LOP_CO_TRE_KHUYET_TAT" ColumnName="IS_LOP_CO_TRE_KHUYET_TAT" />
+                <ScalarProperty Name="ISVNEN" ColumnName="ISVNEN" />
+                <ScalarProperty Name="MA_NHOM_TUOI_MN" ColumnName="MA_NHOM_TUOI_MN" />
+                <ScalarProperty Name="MA_HE_CHUYEN" ColumnName="MA_HE_CHUYEN" />
+                <ScalarProperty Name="IS_LOP_GHEP_2_TUOI" ColumnName="IS_LOP_GHEP_2_TUOI" />
+                <ScalarProperty Name="IS_LOP_GHEP_3_TUOI" ColumnName="IS_LOP_GHEP_3_TUOI" />
+                <ScalarProperty Name="MA_DANH_MUC_NGOAI_NGU_2" ColumnName="MA_DANH_MUC_NGOAI_NGU_2" />
+                <ScalarProperty Name="IS_CTGDMN_MOI" ColumnName="IS_CTGDMN_MOI" />
+                <ScalarProperty Name="IS_CT_CSGD" ColumnName="IS_CT_CSGD" />
+                <ScalarProperty Name="MA_SO_TIET_NGOAI_NGU" ColumnName="MA_SO_TIET_NGOAI_NGU" />
+                <ScalarProperty Name="ID_LOP_GHEP" ColumnName="ID_LOP_GHEP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOP_MON">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.LOP_MON">
+              <MappingFragment StoreEntitySet="LOP_MON">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MA_NAM_HOC" ColumnName="MA_NAM_HOC" />
+                <ScalarProperty Name="MA_SO_GD" ColumnName="MA_SO_GD" />
+                <ScalarProperty Name="ID_PHONG_GD" ColumnName="ID_PHONG_GD" />
+                <ScalarProperty Name="MA_PHONG_GD" ColumnName="MA_PHONG_GD" />
+                <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
+                <ScalarProperty Name="MA_TRUONG" ColumnName="MA_TRUONG" />
+                <ScalarProperty Name="ID_LOP" ColumnName="ID_LOP" />
+                <ScalarProperty Name="ID_MON_HOC" ColumnName="ID_MON_HOC" />
+                <ScalarProperty Name="MA_MON_HOC" ColumnName="MA_MON_HOC" />
+                <ScalarProperty Name="HOC_KY" ColumnName="HOC_KY" />
+                <ScalarProperty Name="ID_GIAO_VIEN_BO_MON" ColumnName="ID_GIAO_VIEN_BO_MON" />
+                <ScalarProperty Name="MA_GIAO_VIEN_BO_MON" ColumnName="MA_GIAO_VIEN_BO_MON" />
+                <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+                <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+                <ScalarProperty Name="TRANG_THAI" ColumnName="TRANG_THAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
