@@ -39,9 +39,12 @@ namespace QuangIchTest.DanhMuc.Form3
     {
         DbAcessProvider dbaProvider = new DbAcessProvider();
         Form1Repository data = new Form1Repository();
+        NHANSURepository resNhanSu = new NHANSURepository();
+        public string MaDinhDanh = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
 
         }
         protected void RadGrid1_ItemCreated(object sender, GridItemEventArgs e)
@@ -59,71 +62,24 @@ namespace QuangIchTest.DanhMuc.Form3
 
 
         }
-       
+
 
         protected void LoadCapHoc(object sender, GridNeedDataSourceEventArgs e)
         {
+
             string MaDinhDanh = txtMaDinhDanh.Text.Trim();
             string HoTen = txtHoTen.Text.Trim();
             string maCapHoc = RadComboBox1.SelectedValue;
-
-            if (string.IsNullOrEmpty(maCapHoc))
-            {
-                string query = String.Format(Form3Command.queryGetAll, e.StartRowIndex, RadGrid1.PageSize);
-                var table = dbaProvider.ExecuteCommand(query);
-                List<Form3ViewModel> list = new List<Form3ViewModel>();
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    Form3ViewModel model = new Form3ViewModel();
-                    model.ID = int.Parse(table.Rows[i]["ID"].ToString());
-                    model.MA = table.Rows[i]["MA"].ToString();
-                    model.HOTEN = table.Rows[i]["HOTEN"].ToString();
-                    model.NGAYSINH = DateTime.Parse(table.Rows[i]["NGAYSINH"].ToString()).ToShortDateString();
-                    model.GIOITINH = table.Rows[i]["GIOITINH"].ToString();
-                    model.TRANGTHAI = table.Rows[i]["TRANGTHAI"].ToString();
-                    model.DANTOC = table.Rows[i]["DANTOC"].ToString();
-                    model.TENVITRI = table.Rows[i]["TENVITRI"].ToString();
-                    model.TENNHOM = table.Rows[i]["TENNHOM"].ToString();
-                    model.HINHTHUC = table.Rows[i]["HINHTHUC"].ToString();
-                    model.TRINHDO = table.Rows[i]["TRINHDO"].ToString();
-                    model.MACAPHOC = table.Rows[i]["MACAPHOC"].ToString();
-                    list.Add(model);
-                }
-                RadGrid1.VirtualItemCount = Int32.Parse(table.Rows[0]["TOTAL_ROW"].ToString());
-                RadGrid1.DataSource = list;
-            }
-            
-            else
-            {
-                string query = String.Format(Form3Command.queryGetMaCapHoc, e.StartRowIndex, RadGrid1.PageSize, maCapHoc);
-                var table = dbaProvider.ExecuteCommand(query);
-                List<Form3ViewModel> list = new List<Form3ViewModel>();
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    Form3ViewModel model = new Form3ViewModel();
-                    model.ID = int.Parse(table.Rows[i]["ID"].ToString());
-                    model.MA = table.Rows[i]["MA"].ToString();
-                    model.HOTEN = table.Rows[i]["HOTEN"].ToString();
-                    model.NGAYSINH = DateTime.Parse(table.Rows[i]["NGAYSINH"].ToString()).ToShortDateString();
-                    model.GIOITINH = table.Rows[i]["GIOITINH"].ToString();
-                    model.TRANGTHAI = table.Rows[i]["TRANGTHAI"].ToString();
-                    model.DANTOC = table.Rows[i]["DANTOC"].ToString();
-                    model.TENVITRI = table.Rows[i]["TENVITRI"].ToString();
-                    model.TENNHOM = table.Rows[i]["TENNHOM"].ToString();
-                    model.HINHTHUC = table.Rows[i]["HINHTHUC"].ToString();
-                    model.TRINHDO = table.Rows[i]["TRINHDO"].ToString();
-                    model.MACAPHOC = table.Rows[i]["MACAPHOC"].ToString();
-                    list.Add(model);
-                }
-
-                RadGrid1.VirtualItemCount = Int32.Parse(table.Rows[0]["TOTAL_ROW"].ToString());
-                RadGrid1.DataSource = list;
-
-
-            }
+            List<Form3ViewModel> list = resNhanSu.GetPage(MaDinhDanh, HoTen, maCapHoc, out int totalRecord);
+            RadGrid1.VirtualItemCount = totalRecord;
+            list.Take(RadGrid1.PageSize).Skip(e.StartRowIndex);
+            RadGrid1.DataSource = list;
 
 
         }
+
+
+
         protected void btn_Search(object sender, EventArgs e)
         {
             RadGrid1.Rebind();
@@ -148,7 +104,7 @@ namespace QuangIchTest.DanhMuc.Form3
 
 
         }
-       
+
         protected void LoadChangeComboxCapHoc(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
 

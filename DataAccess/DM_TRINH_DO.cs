@@ -12,30 +12,14 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class DM_MON_HOC
+    public partial class DM_TRINH_DO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DM_MON_HOC()
-        {
-            this.LOP_MON = new HashSet<LOP_MON>();
-        }
-    
-        public decimal ID { get; set; }
         public string MA { get; set; }
         public string TEN { get; set; }
-        public string MA_CAP_HOC { get; set; }
-        public Nullable<int> MA_NAM_HOC { get; set; }
-        public Nullable<int> KIEU_MON_HOC { get; set; }
-        public Nullable<int> IS_MON_TC { get; set; }
         public Nullable<int> THU_TU { get; set; }
         public Nullable<decimal> NGUOI_TAO { get; set; }
         public Nullable<System.DateTime> NGAY_TAO { get; set; }
         public Nullable<decimal> NGUOI_SUA { get; set; }
         public Nullable<System.DateTime> NGAY_SUA { get; set; }
-    
-        public virtual DM_CAP_HOC DM_CAP_HOC { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LOP_MON> LOP_MON { get; set; }
-        public virtual NAM_HOC NAM_HOC { get; set; }
     }
 }

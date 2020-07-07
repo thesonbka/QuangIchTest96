@@ -73,13 +73,162 @@
     <Compile Include="DM_CAP_HOC.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_DAN_TOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_GIOI_TINH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_HINH_THUC_HOP_DONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_LOAI_CAN_BO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_LY_DO_THOI_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_MIEN_GIAM_HOC_PHI.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_MON_DAY_GV.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_MON_HOC.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_MUC_DAT_CHUAN_QG_CLGD.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NGACH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NGANH_DAO_TAO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NGOAI_NGU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NGOAI_NGU_HS_NHAN_SU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHIEM_VU_KIEM_NHIEM.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHOM_CAN_BO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHOM_CAP_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHOM_CHUYEN_NGANH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHOM_MAU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NHOM_TUOI_MN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_NUOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_PHAN_BAN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_SO_TIET_NGOAI_NGU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_THOI_DIEM_DANH_GIA.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TIENG_DAN_TOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TIET_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TINH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TON_GIAO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TOT_NGHIEP.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRANG_THAI_CAN_BO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRANG_THAI_HOC_SINH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_CHUYEN_MON_NGHIEP_VU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_LLCT.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_NGOAI_NGU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_QLGD.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_QLNN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_TIN_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRINH_DO_VAN_HOA.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_TRUC_THUOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_VT_VIEC_LAM.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_VUNG_KHO_KHAN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_XA.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOC_SINH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HOC_SINH_TOT_NGHIEP.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IRepository\EFRepository.cs" />
+    <Compile Include="IRepository\EFUnitOfWork.cs" />
+    <Compile Include="IRepository\IRepository.cs" />
+    <Compile Include="IRepository\IUnitOfWork.cs" />
+    <Compile Include="IRepository\ListItem.cs" />
     <Compile Include="LOP.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="LOP_MON.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NAM_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHAN_SU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHOM_QUYEN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHONG_BAN.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHONG_GD.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,9 +248,25 @@
       <DependentUpon>QuangIchEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Repository\Form1Repository.cs" />
+    <Compile Include="Repository\NHANSURepository.cs" />
+    <Compile Include="SO_GD.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="SqlCommandQuangIch\Form1Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form2Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form3Command.cs" />
+    <Compile Include="SUC_KHOE_NUOI_DUONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TONG_KET.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TONG_KET_C1.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TRUONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\Form1ViewModel.cs" />
     <Compile Include="ViewModel\Form2ViewModel.cs" />
     <Compile Include="ViewModel\Form3ViewModel.cs" />

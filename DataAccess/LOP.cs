@@ -18,6 +18,11 @@ namespace DataAccess
         public LOP()
         {
             this.LOP_MON = new HashSet<LOP_MON>();
+            this.HOC_SINH = new HashSet<HOC_SINH>();
+            this.HOC_SINH_TOT_NGHIEP = new HashSet<HOC_SINH_TOT_NGHIEP>();
+            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
+            this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
+            this.TONG_KET = new HashSet<TONG_KET>();
         }
     
         public decimal ID { get; set; }
@@ -76,5 +81,23 @@ namespace DataAccess
         public virtual DM_CAP_HOC DM_CAP_HOC { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LOP_MON> LOP_MON { get; set; }
+        public virtual DM_NHOM_TUOI_MN DM_NHOM_TUOI_MN { get; set; }
+        public virtual DM_PHAN_BAN DM_PHAN_BAN { get; set; }
+        public virtual DM_SO_TIET_NGOAI_NGU DM_SO_TIET_NGOAI_NGU { get; set; }
+        public virtual DM_TIET_HOC DM_TIET_HOC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOC_SINH> HOC_SINH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HOC_SINH_TOT_NGHIEP> HOC_SINH_TOT_NGHIEP { get; set; }
+        public virtual NAM_HOC NAM_HOC { get; set; }
+        public virtual PHONG_GD PHONG_GD { get; set; }
+        public virtual SO_GD SO_GD { get; set; }
+        public virtual TRUONG TRUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TONG_KET_C1> TONG_KET_C1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TONG_KET> TONG_KET { get; set; }
     }
 }

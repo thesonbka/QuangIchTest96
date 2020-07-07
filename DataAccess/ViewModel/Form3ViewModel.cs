@@ -8,9 +8,10 @@ namespace DataAccess.ViewModel
 {
     public class Form3ViewModel
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string MA { get; set; }
         public string HOTEN { get; set; }
+       
         public string NGAYSINH { get; set; }
         public string GIOITINH { get; set; }
         public string TRANGTHAI { get; set; }
