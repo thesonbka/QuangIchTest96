@@ -13,6 +13,150 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_MON_HOC_CAP_HOC_DM_CAP_HOC" ManuallyRouted="false" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_DM_MON_HOC" ManuallyRouted="false" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_LOP" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_GIOI_TINH" Width="1.5" PointX="9" PointY="20.75" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LY_DO_THOI_HOC" Width="1.5" PointX="8.375" PointY="7.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_MIEN_GIAM_HOC_PHI" Width="1.5" PointX="8.375" PointY="25.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_MON_DAY_GV" Width="1.5" PointX="24.375" PointY="7.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_MUC_DAT_CHUAN_QG_CLGD" Width="1.5" PointX="12" PointY="29.625" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NGACH" Width="1.5" PointX="14.25" PointY="36.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NGANH_DAO_TAO" Width="1.5" PointX="13.375" PointY="7.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NGOAI_NGU" Width="1.5" PointX="14.25" PointY="67.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NGOAI_NGU_HS_NHAN_SU" Width="1.5" PointX="18.75" PointY="17" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHIEM_VU_KIEM_NHIEM" Width="1.5" PointX="6.375" PointY="30.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHOM_CAN_BO" Width="1.5" PointX="14.25" PointY="42" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHOM_CAP_HOC" Width="1.5" PointX="12" PointY="32.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHOM_CHUYEN_NGANH" Width="1.5" PointX="8.375" PointY="30.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHOM_MAU" Width="1.5" PointX="14.25" PointY="80.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NHOM_TUOI_MN" Width="1.5" PointX="3.75" PointY="50.625" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_NUOC" Width="1.5" PointX="14.25" PointY="64.125" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_PHAN_BAN" Width="1.5" PointX="3.75" PointY="47.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_SO_TIET_NGOAI_NGU" Width="1.5" PointX="3.75" PointY="44" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_THOI_DIEM_DANH_GIA" Width="1.5" PointX="16.375" PointY="32.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TIENG_DAN_TOC" Width="1.5" PointX="18.375" PointY="32.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TIET_HOC" Width="1.5" PointX="3.75" PointY="53.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TINH" Width="1.5" PointX="3.75" PointY="37.625" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TON_GIAO" Width="1.5" PointX="14.25" PointY="33.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TOT_NGHIEP" Width="1.5" PointX="24.375" PointY="32.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRANG_THAI_CAN_BO" Width="1.5" PointX="14.25" PointY="71" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRANG_THAI_HOC_SINH" Width="1.5" PointX="30.375" PointY="7.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO" Width="1.5" PointX="30.375" PointY="11.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_CHUYEN_MON_NGHIEP_VU" Width="1.5" PointX="14.25" PointY="52.75" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_LLCT" Width="1.5" PointX="14.25" PointY="60.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_NGOAI_NGU" Width="1.5" PointX="14.25" PointY="57" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_QLGD" Width="1.5" PointX="14.25" PointY="74.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_QLNN" Width="1.5" PointX="8.375" PointY="34.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_TIN_HOC" Width="1.5" PointX="14.25" PointY="77.625" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRINH_DO_VAN_HOA" Width="1.5" PointX="30.375" PointY="15.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_TRUC_THUOC" Width="1.5" PointX="12" PointY="37.375" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_VT_VIEC_LAM" Width="1.5" PointX="30.375" PointY="19.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_VUNG_KHO_KHAN" Width="1.5" PointX="30.375" PointY="24.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_XA" Width="1.5" PointX="3" PointY="9" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.HOC_SINH" Width="1.5" PointX="11.25" PointY="8.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.HOC_SINH_TOT_NGHIEP" Width="1.5" PointX="24.5" PointY="23.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.NAM_HOC" Width="1.5" PointX="0.75" PointY="14" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.NHAN_SU" Width="1.5" PointX="16.5" PointY="5.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.NHOM_QUYEN" Width="1.5" PointX="12" PointY="47.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.PHONG_BAN" Width="1.5" PointX="14.25" PointY="46.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.PHONG_GD" Width="1.5" PointX="3" PointY="19" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.SO_GD" Width="1.5" PointX="3.75" PointY="29.25" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.SUC_KHOE_NUOI_DUONG" Width="1.5" PointX="24.5" PointY="14.5" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TONG_KET" Width="1.5" PointX="21.5" PointY="0.75" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TONG_KET_C1" Width="1.5" PointX="27.5" PointY="2.875" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TRUONG" Width="1.5" PointX="14.25" PointY="11" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHOM_QUYEN_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_GIOI_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_DM_GIOI_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_GIOI_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_MON_HOC_CAP_HOC_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_MUC_DAT_CHUAN_QG_CLGD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_NGACH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DM_TRINH_DO_NGOAI_NGU_DM_NGOAI_NGU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_NGOAI_NGU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DM_NGOAI_NGU_HS_NHAN_SU_NHAN_SU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_NHOM_CAN_BO" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_NHOM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_NHOM_MAU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DM_NHOM_TUOI_MN" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_NUOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DM_PHAN_BAN" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DM_SO_TIET_NGOAI_NGU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DM_TIET_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DM_XA_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SO_GD_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_TINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TON_GIAO" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRANG_THAI_CAN_BO" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_DAO_TAO" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_LLCT" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_NGOAI_NGU" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_QLGD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_TIN_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_TRUC_THUOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DM_XA_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_XA" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_XA" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_XA" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_HOC_SINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_HOC_SINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_HOC_SINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_PHONG_BAN" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHOM_QUYEN_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_BAN_NHOM_QUYEN" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_TRUONG" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_DAN_TOC" Width="1.5" PointX="5.375" PointY="1" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_DM_DAN_TOC" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_CAN_BO" Width="1.5" PointX="7.375" PointY="1.25" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_LOAI_CAN_BO" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_HINH_THUC_HOP_DONG" Width="1.5" PointX="9.375" PointY="1.375" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_HINH_THUC_HOP_DONG" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

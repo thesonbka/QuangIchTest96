@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="QuangIchTest.DanhMuc.Form2.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
@@ -223,4 +224,11 @@
             </telerik:RadWindowManager>
         </div>
     </div>
+
+     <script type="text/javascript">
+         var x = $("#ContentPlaceHolder1_lkbtThemMoi").val();
+         console.log(x);
+         console.log("kick");
+
+     </script>
 </asp:Content>

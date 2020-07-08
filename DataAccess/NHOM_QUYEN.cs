@@ -12,32 +12,30 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class LOP_MON
+    public partial class NHOM_QUYEN
     {
-        public decimal ID { get; set; }
-        public int MA_NAM_HOC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NHOM_QUYEN()
+        {
+            this.PHONG_BAN = new HashSet<PHONG_BAN>();
+        }
+    
+        public string MA { get; set; }
+        public string TEN { get; set; }
+        public string MA_CAP_DON_VI { get; set; }
+        public string MA_CAP_HOC { get; set; }
         public string MA_SO_GD { get; set; }
-        public Nullable<decimal> ID_PHONG_GD { get; set; }
         public string MA_PHONG_GD { get; set; }
-        public decimal ID_TRUONG { get; set; }
         public string MA_TRUONG { get; set; }
-        public decimal ID_LOP { get; set; }
-        public Nullable<decimal> ID_MON_HOC { get; set; }
-        public string MA_MON_HOC { get; set; }
-        public int HOC_KY { get; set; }
-        public Nullable<decimal> ID_GIAO_VIEN_BO_MON { get; set; }
-        public string MA_GIAO_VIEN_BO_MON { get; set; }
+        public Nullable<int> TRANG_THAI { get; set; }
         public Nullable<decimal> NGUOI_TAO { get; set; }
         public Nullable<System.DateTime> NGAY_TAO { get; set; }
         public Nullable<decimal> NGUOI_SUA { get; set; }
         public Nullable<System.DateTime> NGAY_SUA { get; set; }
-        public Nullable<int> TRANG_THAI { get; set; }
     
-        public virtual DM_MON_HOC DM_MON_HOC { get; set; }
-        public virtual LOP LOP { get; set; }
-        public virtual NAM_HOC NAM_HOC { get; set; }
-        public virtual PHONG_GD PHONG_GD { get; set; }
+        public virtual DM_CAP_HOC DM_CAP_HOC { get; set; }
         public virtual SO_GD SO_GD { get; set; }
-        public virtual TRUONG TRUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHONG_BAN> PHONG_BAN { get; set; }
     }
 }

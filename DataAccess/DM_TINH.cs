@@ -12,18 +12,17 @@ namespace DataAccess
     using System;
     using System.Collections.Generic;
     
-    public partial class DM_CAP_HOC
+    public partial class DM_TINH
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DM_CAP_HOC()
+        public DM_TINH()
         {
-            this.LOPs = new HashSet<LOP>();
-            this.DM_MON_HOC = new HashSet<DM_MON_HOC>();
+            this.DM_XA = new HashSet<DM_XA>();
             this.HOC_SINH = new HashSet<HOC_SINH>();
-            this.NHOM_QUYEN = new HashSet<NHOM_QUYEN>();
-            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
-            this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
-            this.TONG_KET = new HashSet<TONG_KET>();
+            this.NHAN_SU = new HashSet<NHAN_SU>();
+            this.PHONG_GD = new HashSet<PHONG_GD>();
+            this.SO_GD = new HashSet<SO_GD>();
+            this.TRUONGs = new HashSet<TRUONG>();
         }
     
         public string MA { get; set; }
@@ -33,20 +32,19 @@ namespace DataAccess
         public Nullable<System.DateTime> NGAY_TAO { get; set; }
         public Nullable<decimal> NGUOI_SUA { get; set; }
         public Nullable<System.DateTime> NGAY_SUA { get; set; }
+        public string CAP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LOP> LOPs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DM_MON_HOC> DM_MON_HOC { get; set; }
+        public virtual ICollection<DM_XA> DM_XA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOC_SINH> HOC_SINH { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<NHOM_QUYEN> NHOM_QUYEN { get; set; }
+        public virtual ICollection<NHAN_SU> NHAN_SU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
+        public virtual ICollection<PHONG_GD> PHONG_GD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TONG_KET_C1> TONG_KET_C1 { get; set; }
+        public virtual ICollection<SO_GD> SO_GD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TONG_KET> TONG_KET { get; set; }
+        public virtual ICollection<TRUONG> TRUONGs { get; set; }
     }
 }

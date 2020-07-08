@@ -17,7 +17,7 @@
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
-             <telerik:AjaxSetting AjaxControlID="btnSearch">
+            <telerik:AjaxSetting AjaxControlID="btnSearch">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
@@ -102,6 +102,15 @@
                     }
                 }
             }
+            //$("#ContentPlaceHolder1_txtMaDinhDanh").keypress(function (e) {
+            //    debugger;
+            //    console.log($("#ContentPlaceHolder1_txtMaDinhDanh").val());
+                
+            //    if (e.keyCode == 13) {
+                    
+            //        $("#ContentPlaceHolder1_txtMaDinhDanh").val();
+            //    }
+            //});
 
 
         </script>
@@ -118,7 +127,7 @@
         <!-- right -->
         <div class="col-sm-9 qi-button-form text-right">
             <div class="grbt-chucnang">
-                 <asp:Button ID="btnSearch" runat="server" OnClick="btn_Search" CssClass="btn btn-success qi-bt" Text="Tìm kiếm" />
+                <asp:Button ID="btnSearch" runat="server" OnClick="btn_Search" CssClass="btn btn-success qi-bt" Text="Tìm kiếm" />
                 <asp:Button ID="lkbtThemMoi" runat="server" CssClass="btn btn-success qi-bt" Text="Thêm mới" OnClientClick="if(!ShowInsertForm()) return false;" />
                 <asp:Button ID="lkbtXoa" runat="server" CssClass="btn btn-success qi-bt" Text="Xóa" OnClick="btXoa_Click" OnClientClick="if(!btDeteleClick()) return false;" />
             </div>
@@ -135,19 +144,19 @@
     <!-- nhom chuc nang headerbottom -->
 
     <div id="qi-panel-search" class="fillterFieldsOneRow">
-        <div class="form-group">          
+        <div class="form-group">
             <label class="control-label pull-left">Mã định danh</label>
             <div class="col-sm-2 lbleft">
-                <asp:TextBox ID="txtMaDinhDanh" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="txtMaDinhDanh" runat="server" CssClass="form-control" AutoPostBack="true"></asp:TextBox>
                 <asp:CustomValidator Display="Dynamic" ForeColor="red" runat="server" ID="NumberValidator" EnableClientScript="true"
                     ClientValidationFunction="NumberValidation" ControlToValidate="txtMaDinhDanh" ErrorMessage="Bạn phải nhập số dương">
                 </asp:CustomValidator>
             </div>
-             <label class="control-label pull-left">Họ Tên</label>
+            <label class="control-label pull-left">Họ Tên</label>
             <div class="col-sm-2 lbleft">
-                <asp:TextBox ID="txtHoTen" runat="server" CssClass="form-control"></asp:TextBox>               
+                <asp:TextBox ID="txtHoTen" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
-             <label class="control-label pull-left">Chọn cấp học</label>
+            <label class="control-label pull-left">Chọn cấp học</label>
             <div class="col-sm-2 lbleft">
                 <telerik:RadComboBox ID="RadComboBox1" runat="server" DataSourceID="objKhoi" DataTextField="TEN" DataValueField="MA" OnSelectedIndexChanged="LoadChangeComboxCapHoc" AutoPostBack="true" Width="100%" CausesValidation="false"
                     EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
@@ -232,6 +241,9 @@
             </Windows>
         </telerik:RadWindowManager>
     </div>
+
+    
+
 
 
 </asp:Content>

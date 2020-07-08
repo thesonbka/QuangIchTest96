@@ -8,11 +8,17 @@ using System.Web.UI.WebControls;
 using DataAccess.SqlCommandQuangIch;
 using Telerik.Web.UI;
 using System.Data;
+using DataAccess.Repository;
+using DataAccess.IRepository;
 
 namespace QuangIchTest.DanhMuc.Form2
 {
     public partial class FormInsert : System.Web.UI.Page
     {
+      
+        NHANSURepository resNhanSu = new NHANSURepository();
+
+        
         DbAcessProvider dbaProvider = new DbAcessProvider();
         string MATRUONG = "14150";
         string MANAMHOC = "2017";
