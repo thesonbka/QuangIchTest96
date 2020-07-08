@@ -34,6 +34,7 @@ namespace QuangIchTest.DanhMuc.Form3
             }
             return list;
         }
+        
     }
     public partial class index : System.Web.UI.Page
     {

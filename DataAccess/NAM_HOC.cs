@@ -29,6 +29,7 @@ namespace DataAccess
             this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
             this.TONG_KET = new HashSet<TONG_KET>();
             this.TRUONGs = new HashSet<TRUONG>();
+            this.DM_HUYEN = new HashSet<DM_HUYEN>();
         }
     
         public int MA { get; set; }
@@ -62,5 +63,7 @@ namespace DataAccess
         public virtual ICollection<TONG_KET> TONG_KET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TRUONG> TRUONGs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DM_HUYEN> DM_HUYEN { get; set; }
     }
 }

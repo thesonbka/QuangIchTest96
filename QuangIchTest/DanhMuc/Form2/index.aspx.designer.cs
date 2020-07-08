@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuangIchTest.DanhMuc.Form2
-{
-
-
-    public partial class index
-    {
-
+namespace QuangIchTest.DanhMuc.Form2 {
+    
+    
+    public partial class index {
+        
         /// <summary>
         /// ScriptManager1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-
+        
         /// <summary>
         /// RadAjaxManager1 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxManager RadAjaxManager1;
-
+        
         /// <summary>
         /// RadAjaxLoadingPanel1 control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
-
+        
         /// <summary>
         /// lblTieuDe control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadLabel lblTieuDe;
-
+        
         /// <summary>
         /// lkbtThemMoi control.
         /// </summary>
@@ -58,7 +56,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button lkbtThemMoi;
-
+        
         /// <summary>
         /// lkbtXoa control.
         /// </summary>
@@ -67,7 +65,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button lkbtXoa;
-
+        
         /// <summary>
         /// lblMessageNotice control.
         /// </summary>
@@ -76,7 +74,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessageNotice;
-
+        
         /// <summary>
         /// rcbNhomLop control.
         /// </summary>
@@ -85,7 +83,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbNhomLop;
-
+        
         /// <summary>
         /// objKhoi control.
         /// </summary>
@@ -94,7 +92,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource objKhoi;
-
+        
         /// <summary>
         /// rcbNhomTuoi control.
         /// </summary>
@@ -103,7 +101,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadComboBox rcbNhomTuoi;
-
+        
         /// <summary>
         /// RadGrid1 control.
         /// </summary>
@@ -112,7 +110,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadGrid RadGrid1;
-
+        
         /// <summary>
         /// RadWindowManager1 control.
         /// </summary>
@@ -121,7 +119,7 @@ namespace QuangIchTest.DanhMuc.Form2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadWindowManager RadWindowManager1;
-
+        
         /// <summary>
         /// RadWindow1 control.
         /// </summary>

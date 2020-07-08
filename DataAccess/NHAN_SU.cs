@@ -152,5 +152,7 @@ namespace DataAccess
         public virtual TRUONG TRUONG { get; set; }
         public virtual DM_LOAI_CAN_BO DM_LOAI_CAN_BO { get; set; }
         public virtual DM_HINH_THUC_HOP_DONG DM_HINH_THUC_HOP_DONG { get; set; }
+        public virtual DM_HUYEN DM_HUYEN { get; set; }
+        public virtual DM_CHUYEN_MON DM_CHUYEN_MON { get; set; }
     }
 }

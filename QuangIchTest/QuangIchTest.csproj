@@ -114,41 +114,23 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
-    <Content Include="DanhMuc\Form10\index.aspx" />
-    <Content Include="DanhMuc\Form11\index.aspx" />
     <Content Include="DanhMuc\Form1\FormEdit.aspx" />
     <Content Include="DanhMuc\Form1\FormInsert.aspx" />
     <Content Include="DanhMuc\Form1\index.aspx" />
     <Content Include="DanhMuc\Form2\FormEdit.aspx" />
     <Content Include="DanhMuc\Form2\FormInsert.aspx" />
     <Content Include="DanhMuc\Form2\index.aspx" />
+    <Content Include="DanhMuc\Form3\FormEdit.aspx" />
     <Content Include="DanhMuc\Form3\FormInsert.aspx" />
     <Content Include="DanhMuc\Form3\index.aspx" />
     <Content Include="DanhMuc\Form4\index.aspx" />
     <Content Include="DanhMuc\Form5\index.aspx" />
     <Content Include="DanhMuc\Form6\index.aspx" />
-    <Content Include="DanhMuc\Form7\index.aspx" />
-    <Content Include="DanhMuc\Form8\index.aspx" />
-    <Content Include="DanhMuc\Form9\index.aspx" />
     <Content Include="default.aspx" />
     <Content Include="js\Form1\Scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DanhMuc\Form10\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\Form10\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\Form11\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\Form11\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="DanhMuc\Form1\FormEdit.aspx.cs">
       <DependentUpon>FormEdit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +171,13 @@
     <Compile Include="DanhMuc\Form2\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\Form3\FormEdit.aspx.cs">
+      <DependentUpon>FormEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\Form3\FormEdit.aspx.designer.cs">
+      <DependentUpon>FormEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\Form3\FormInsert.aspx.cs">
       <DependentUpon>FormInsert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,27 +210,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DanhMuc\Form6\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\Form7\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\Form7\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\Form8\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\Form8\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="DanhMuc\Form9\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="DanhMuc\Form9\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">

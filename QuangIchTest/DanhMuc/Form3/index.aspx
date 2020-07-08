@@ -32,12 +32,7 @@
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
-            </telerik:AjaxSetting>
-            <%--<telerik:AjaxSetting AjaxControlID="lkbtThemMoi">
-                <UpdatedControls>
-                    <telerik:AjaxUpdatedControl ControlID="modalPopup" />
-                </UpdatedControls>
-            </telerik:AjaxSetting>--%>
+            </telerik:AjaxSetting>            
         </AjaxSettings>
     </telerik:RadAjaxManager>
     <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server"></telerik:RadAjaxLoadingPanel>
@@ -236,7 +231,7 @@
         <telerik:RadWindowManager RenderMode="Lightweight" ID="RadWindowManager1" runat="server" EnableShadow="true">
             <Windows>
                 <telerik:RadWindow RenderMode="Lightweight" ID="RadWindow1" runat="server" ShowContentDuringLoad="false" Width="1100px"
-                    Height="700px" Title="Chi tiết hồ so giáo viên" Behaviors="Reload,Close,Maximize" Modal="true" VisibleStatusbar="false">
+                    Height="700px" Title="Chi tiết hồ sơ giáo viên" Behaviors="Reload,Close,Maximize" Modal="true" VisibleStatusbar="false">
                 </telerik:RadWindow>
             </Windows>
         </telerik:RadWindowManager>

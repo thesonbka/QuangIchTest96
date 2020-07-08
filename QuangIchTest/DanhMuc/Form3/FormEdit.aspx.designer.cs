@@ -10,7 +10,7 @@
 namespace QuangIchTest.DanhMuc.Form3 {
     
     
-    public partial class FormInsert {
+    public partial class FormEdit {
         
         /// <summary>
         /// ScriptManager1 control.

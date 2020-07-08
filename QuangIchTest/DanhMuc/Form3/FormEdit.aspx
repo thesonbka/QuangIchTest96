@@ -1,9 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Popup.Master" AutoEventWireup="true" CodeBehind="FormInsert.aspx.cs" Inherits="QuangIchTest.DanhMuc.Form3.FormInsert" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Popup.Master" AutoEventWireup="true" CodeBehind="FormEdit.aspx.cs" Inherits="QuangIchTest.DanhMuc.Form3.FormEdit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <telerik:RadCodeBlock runat="server">
         <script>
             function getRadWindow() {
@@ -215,6 +214,7 @@
 
     </telerik:RadCodeBlock>
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
         <AjaxSettings>
             <telerik:AjaxSetting AjaxControlID="rcbTinh">
@@ -446,7 +446,7 @@
         <div class="col-md-6"></div>
         <div class="col-md-6">
             <div class="form-group editForm-button">
-                <asp:Button ID="btnGhi" OnClick="btn_Save" Text='Cập nhật'
+                <asp:Button ID="btnGhi" OnClick="btn_Save" Text='Sửa bản ghi'
                     runat="server"></asp:Button>
                 &nbsp;
                         <asp:Button ID="btnCancel" Text="Đóng" runat="server" CausesValidation="False"

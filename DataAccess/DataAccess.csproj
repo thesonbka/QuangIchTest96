@@ -70,7 +70,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbAcessProvider.cs" />
+    <Compile Include="DM_BAC_LUONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_BOI_DUONG_TX.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_CAP_HOC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_CHUYEN_MON.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DM_DAN_TOC.cs">
@@ -80,6 +89,9 @@
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DM_HINH_THUC_HOP_DONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_HUYEN.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DM_LOAI_CAN_BO.cs">
@@ -269,6 +281,7 @@
     </Compile>
     <Compile Include="ViewModel\Form1ViewModel.cs" />
     <Compile Include="ViewModel\Form2ViewModel.cs" />
+    <Compile Include="ViewModel\Form3InsertUpdateViewModel.cs" />
     <Compile Include="ViewModel\Form3ViewModel.cs" />
     <Compile Include="ViewModel\ListItemCapHoc.cs" />
   </ItemGroup>

@@ -62,21 +62,7 @@
                         <li>
                             <a href="/DanhMuc/Form6/index.aspx">Form6</a>
                         </li>
-                        <li>
-                            <a href="/DanhMuc/Form7/index.aspx">Form7</a>
-                        </li>
-                        <li>
-                            <a href="/DanhMuc/Form8/index.aspx">Form8</a>
-                        </li>
-                        <li>
-                            <a href="/DanhMuc/Form9/index.aspx">Form9</a>
-                        </li>
-                        <li>
-                            <a href="/DanhMuc/Form10/index.aspx">Form10</a>
-                        </li>
-                        <li>
-                            <a href="/DanhMuc/Form11/index.aspx">Form11</a>
-                        </li>
+                        
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->

@@ -82,5 +82,9 @@ namespace DataAccess
         public virtual DbSet<DM_DAN_TOC> DM_DAN_TOC { get; set; }
         public virtual DbSet<DM_LOAI_CAN_BO> DM_LOAI_CAN_BO { get; set; }
         public virtual DbSet<DM_HINH_THUC_HOP_DONG> DM_HINH_THUC_HOP_DONG { get; set; }
+        public virtual DbSet<DM_HUYEN> DM_HUYEN { get; set; }
+        public virtual DbSet<DM_BAC_LUONG> DM_BAC_LUONG { get; set; }
+        public virtual DbSet<DM_CHUYEN_MON> DM_CHUYEN_MON { get; set; }
+        public virtual DbSet<DM_BOI_DUONG_TX> DM_BOI_DUONG_TX { get; set; }
     }
 }

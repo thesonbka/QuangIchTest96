@@ -23,6 +23,7 @@ namespace DataAccess
             this.PHONG_GD = new HashSet<PHONG_GD>();
             this.SO_GD = new HashSet<SO_GD>();
             this.TRUONGs = new HashSet<TRUONG>();
+            this.DM_HUYEN = new HashSet<DM_HUYEN>();
         }
     
         public string MA { get; set; }
@@ -46,5 +47,7 @@ namespace DataAccess
         public virtual ICollection<SO_GD> SO_GD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TRUONG> TRUONGs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DM_HUYEN> DM_HUYEN { get; set; }
     }
 }
