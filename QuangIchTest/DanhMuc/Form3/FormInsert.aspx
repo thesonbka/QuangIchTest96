@@ -89,128 +89,6 @@
                 setValidTaskHinhThucHopDong();
                 setValidTaskPhuCapChucVuLanhDao();
             }
-            function setValidTask1() {
-               <%-- var maNN = $find("<%= rcbNgoaiNgu.ClientID%>");
-                 var tdNN = $find("<%= rcbTrinhDoDaoTaoNgoaiNgu.ClientID%>");
-                 var nhomNN = $find("<%= rcbNhomCChiNNgu.ClientID%>");
-                 var loaiNN = $find("<%= rcbLoaiCChiNNgu.ClientID%>");
-                 var khungNN = $find("<%= rcbKhungNLucNNgu.ClientID%>");
-
-                $('.index-relate-g1, .index-relate-g2').removeClass('valid-task');
-                if (maNN != null) {
-                    var itemNN = maNN.get_selectedItem();
-                    if (itemNN != null && itemNN.get_value() != '') {
-                        $('.index-relate-g1, .index-relate-g2').addClass('valid-task');
-
-                        if (tdNN != null) {
-                            var itemTDNN = tdNN.get_selectedItem();
-                            if (itemTDNN != null && itemTDNN.get_value() != '') {
-                                $('.index-relate-g2').removeClass('valid-task');
-                                $('.index-relate-g1').addClass('valid-task');
-                            }
-                        }
-
-                        if (nhomNN != null && loaiNN != null && khungNN != null) {
-                            var itemNhomNN = nhomNN.get_selectedItem();
-                            var itemLoaiNN = loaiNN.get_selectedItem();
-                            var itemKhungNN = khungNN.get_selectedItem();
-
-                            if ((itemNhomNN != null && itemNhomNN.get_value() != '') ||
-                                (itemLoaiNN != null && itemLoaiNN.get_value() != '') ||
-                                (itemKhungNN != null && itemKhungNN.get_value() != '')) {
-                                $('.index-relate-g1').removeClass('valid-task');
-                                $('.index-relate-g2').addClass('valid-task');
-                            }
-                        }
-                    }
-                }--%>
-            }
-
-            function setValidTask() {
-               <%-- var nhomCB = $find("<%= rcbNhomCB.ClientID%>");
-        var maMonDay = $find("<%= rcbMonDay.ClientID%>");
-        var htHopDong = $find("<%= rcbHinhThucHopDong.ClientID%>");
-                $('.index-relate-1, .index-relate-2, .index-relate-3, .index-relate-4, .index-relate-5, .index-relate-6, .index-relate-7').removeClass('valid-task');
-                if (nhomCB != null) {
-                    var itemNhomCB = nhomCB.get_selectedItem();
-                    if (itemNhomCB != null) {
-                        var valueNhomCB = itemNhomCB.get_value();
-                        if (valueNhomCB == '01') {
-                            $('.index-relate-1, .index-relate-2, .index-relate-3, .index-relate-4, .index-relate-5, .index-relate-6, .index-relate-7').addClass('valid-task');
-                        }
-                        if (valueNhomCB == '02') {
-                            $('.index-relate-1, .index-relate-5, .index-relate-6, .index-relate-7').addClass('valid-task');
-                            if (htHopDong != null) {
-                                var itemHtHopDong = htHopDong.get_selectedItem();
-                                if (itemHtHopDong != null) {
-                                    var valueHTHopDong = itemHtHopDong.get_value();
-                                    var arrHTValid = new Array('02', '03', '04', '05');
-                                    if ($.inArray(valueHTHopDong, arrHTValid) != -1) {
-                                        $('.index-relate-5, .index-relate-6, .index-relate-7').removeClass('valid-task');
-                                    }
-                                }
-                            }
-                        }
-                        if (valueNhomCB == '03' || valueNhomCB == '06') {
-                            $('.index-relate-2, .index-relate-3, .index-relate-4, .index-relate-5, .index-relate-6, .index-relate-7').addClass('valid-task');
-                        }
-                    }
-                }--%>
-            }
-
-            function setValidTaskHinhThucHopDong() {
-               <%-- var htHopDong = $find("<%= rcbHinhThucHopDong.ClientID%>");
-        var nhomCB = $find("<%= rcbNhomCB.ClientID%>");
-
-                $('.index-relate-5, .index-relate-6, .index-relate-7, .index-relate-9').removeClass('valid-task');
-                if (htHopDong != null) {
-                    var itemHTHopDong = htHopDong.get_selectedItem();
-                    if (itemHTHopDong != null) {
-                        var valueHTHopDong = itemHTHopDong.get_value();
-                        // .index-relate-5 -- > Ngạch/Hạng
-                        // .index-relate-6 -- > Bậc lương
-                        // .index-relate-7 -- > Hệ số lương
-                        // .index-relate-9 -- > Mức phụ cấp ưu đãi nghề
-                        if (valueHTHopDong == '07' || valueHTHopDong == '08' || valueHTHopDong == '02') {
-                            $('.index-relate-6, .index-relate-7').addClass('valid-task');
-                        }
-                        if (nhomCB != null) {
-                            var itemNhomCB = nhomCB.get_selectedItem();
-                            if (itemNhomCB != null) {
-                                var valueNhomCB = itemNhomCB.get_value();
-                                if (valueNhomCB == '01' || valueNhomCB == '03') {
-                                    if (valueHTHopDong == '07' || valueHTHopDong == '08')
-                                        $('.index-relate-5, .index-relate-9').addClass('valid-task');
-                                    else
-                                        $('.index-relate-5, .index-relate-9').removeClass('valid-task');
-                                }
-                                if (valueNhomCB == '02') {
-                                    if (valueHTHopDong == '07' || valueHTHopDong == '08')
-                                        $('.index-relate-5').addClass('valid-task');
-                                    else
-                                        $('.index-relate-5').removeClass('valid-task');
-                                }
-                            }
-                        }
-                    }
-                }--%>
-            }
-
-            function setValidTaskPhuCapChucVuLanhDao() {
-                <%--var loaiCB = $find("<%= rcbLoaiCB.ClientID%>");
-
-                $('.index-relate-10').removeClass('valid-task');
-                if (loaiCB != null) {
-                    var itemLoaiCB = loaiCB.get_selectedItem();
-                    if (itemLoaiCB != null) {
-                        var valueLoaiCB = itemLoaiCB.get_value();
-                        if (valueLoaiCB == '01' || valueLoaiCB == '02' || valueLoaiCB == '03' || valueLoaiCB == '04') {
-                            $('.index-relate-10').addClass('valid-task');
-
-                        }
-                    }
-                }--%>
-            }
         </script>
 
     </telerik:RadCodeBlock>
@@ -451,8 +329,6 @@
                 &nbsp;
                         <asp:Button ID="btnCancel" Text="Đóng" runat="server" CausesValidation="False"
                             CommandName="Cancel" OnClientClick="onClientClose()"></asp:Button>
-
-                <%--<asp:Button ID="btSaveAndAdd" CssClass="btn btn-default qi-bt" runat="server" Text="Ghi và thêm" OnClick="btSaveAndAdd_Click" />--%>
             </div>
 
         </div>
@@ -573,7 +449,10 @@
                                         <span class="qi-name-control">Mức phụ cấp nghề</span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
-                                        <asp:TextBox ID="txtPhuCapNghe" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <telerik:RadNumericTextBox ID="tbPhuCapThuHutNghe" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
+                                            <NumberFormat GroupSeparator="" DecimalDigits="2" />
+                                        </telerik:RadNumericTextBox>
+
                                     </div>
                                 </div>
                             </div>
@@ -583,7 +462,9 @@
                                         <span class="qi-name-control">Hệ số lương</span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
-                                        <asp:TextBox ID="txtHeSoLuong" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <telerik:RadNumericTextBox ID="tbHeSo" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
+                                            <NumberFormat GroupSeparator="" DecimalDigits="2" />
+                                        </telerik:RadNumericTextBox>
                                     </div>
                                 </div>
                             </div>
@@ -597,7 +478,9 @@
                                         <span class="qi-name-control">Mức phụ cấp thâm niên</span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
-                                        <asp:TextBox ID="txtMucPhuCapThamNien" runat="server" CssClass="form-control"></asp:TextBox>
+                                        <telerik:RadNumericTextBox ID="tbPhuCapThamNien" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
+                                            <NumberFormat GroupSeparator="" DecimalDigits="2" />
+                                        </telerik:RadNumericTextBox>
                                     </div>
                                 </div>
                             </div>
@@ -640,7 +523,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="col-xs-12 col-sm-4 col-md-4 control-label">
-                                        <span class="qi-name-control">KQ B.dưỡng t.xuyên</span>
+                                        <span class="qi-name-control">KQ B.dưỡng t.xuyên <span style="color: red">(*)</span></span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
                                         <telerik:RadComboBox ID="rcbBoiDuongTX" runat="server" DataSourceID="objBoiDuongTX" DataTextField="TEN" DataValueField="MA" Width="100%"
@@ -689,7 +572,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="col-xs-12 col-sm-4 col-md-4 control-label">
-                                        <span class="qi-name-control">T.độ c.môn n.vụ</span>
+                                        <span class="qi-name-control">T.độ c.môn n.vụ <span style="color: red">(*)</span></span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
                                         <telerik:RadComboBox ID="rcbTrinhDoChuyenMon" runat="server" DataSourceID="objTrinhDoChuyenMon" DataTextField="TEN" DataValueField="MA" Width="100%"

@@ -32,7 +32,7 @@
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
-            </telerik:AjaxSetting>            
+            </telerik:AjaxSetting>
         </AjaxSettings>
     </telerik:RadAjaxManager>
     <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server"></telerik:RadAjaxLoadingPanel>
@@ -97,17 +97,7 @@
                     }
                 }
             }
-            //$("#ContentPlaceHolder1_txtMaDinhDanh").keypress(function (e) {
-            //    debugger;
-            //    console.log($("#ContentPlaceHolder1_txtMaDinhDanh").val());
-                
-            //    if (e.keyCode == 13) {
-                    
-            //        $("#ContentPlaceHolder1_txtMaDinhDanh").val();
-            //    }
-            //});
-
-
+           
         </script>
 
     </telerik:RadCodeBlock>
@@ -237,7 +227,7 @@
         </telerik:RadWindowManager>
     </div>
 
-    
+
 
 
 

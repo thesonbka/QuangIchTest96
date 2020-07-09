@@ -463,31 +463,31 @@ namespace QuangIchTest.DanhMuc.Form3 {
         protected global::Telerik.Web.UI.RadPageView RadPageView2;
         
         /// <summary>
-        /// txtPhuCapNghe control.
+        /// tbPhuCapThuHutNghe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPhuCapNghe;
+        protected global::Telerik.Web.UI.RadNumericTextBox tbPhuCapThuHutNghe;
         
         /// <summary>
-        /// txtHeSoLuong control.
+        /// tbHeSo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtHeSoLuong;
+        protected global::Telerik.Web.UI.RadNumericTextBox tbHeSo;
         
         /// <summary>
-        /// txtMucPhuCapThamNien control.
+        /// tbPhuCapThamNien control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMucPhuCapThamNien;
+        protected global::Telerik.Web.UI.RadNumericTextBox tbPhuCapThamNien;
         
         /// <summary>
         /// dateNgayHuongLuong control.

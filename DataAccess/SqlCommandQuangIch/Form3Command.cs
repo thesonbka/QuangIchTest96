@@ -30,5 +30,7 @@ namespace DataAccess.SqlCommandQuangIch
         LEFT JOIN dbo.DM_HINH_THUC_HOP_DONG AS hinhthuc ON nhansu.MA_HINH_THUC_HOP_DONG = hinhthuc.MA
         LEFT JOIN dbo.DM_TRINH_DO_CHUYEN_MON_NGHIEP_VU AS trinhdo ON nhansu.MA_TRINH_DO_CHUYEN_MON = trinhdo.MA WHERE nhansu.MA_CAP_HOC = '{2}' ORDER BY nhansu.MA OFFSET {0} ROWS FETCH NEXT {1} ROWS ONLY";
 
+        public static string deleteNhanSuId = @"delete from dbo.NHAN_SU WHERE ID IN ({0})";
+
     }
 }

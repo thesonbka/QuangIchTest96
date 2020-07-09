@@ -169,6 +169,13 @@
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_CHUYEN_MON" Width="1.5" PointX="11.375" PointY="1.25" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_DM_TRINH_DO_CHUYEN_MON" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_BOI_DUONG_TX" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_KHOI" Width="1.5" PointX="3" PointY="58" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DM_KHOI_DM_CAP_HOC" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_KHU_VUC" Width="1.5" PointX="5.375" PointY="15" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_KHU_VUC" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_KHUYET_TAT" Width="1.5" PointX="7.375" PointY="15" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_DIEN_CHINH_SACH" Width="1.5" PointX="15.375" PointY="1.125" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_HOC_BAN_TRU" Width="1.5" PointX="17.375" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

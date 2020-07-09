@@ -43,7 +43,7 @@ namespace DataAccess.Repository
                             MA_NGACH = obj.MA_NGACH,
                             MA_MON_DAY = obj.MA_MON_DAY,
                             MA_SO_NGACH = obj.MA_SO_NGACH,
-                            PC_THU_HUT = obj.PC_THU_HUT.ToString(),
+                            PC_THU_HUT = obj.PC_THU_HUT,
                             HE_SO_LUONG = obj.HE_SO_LUONG,
                             PC_THAM_NIEN = obj.PC_THAM_NIEN,
                             NGAY_HUONG_LUONG = obj.NGAY_HUONG_LUONG,

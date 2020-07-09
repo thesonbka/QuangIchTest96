@@ -85,16 +85,31 @@
     <Compile Include="DM_DAN_TOC.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_DIEN_CHINH_SACH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_GIOI_TINH.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DM_HINH_THUC_HOP_DONG.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_HOC_BAN_TRU.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_HUYEN.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_KHOI.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_KHU_VUC.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_LOAI_CAN_BO.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DM_LOAI_KHUYET_TAT.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
     <Compile Include="DM_LY_DO_THOI_HOC.cs">
@@ -260,6 +275,7 @@
       <DependentUpon>QuangIchEntity.edmx</DependentUpon>
     </Compile>
     <Compile Include="Repository\Form1Repository.cs" />
+    <Compile Include="Repository\HocSinhRepository.cs" />
     <Compile Include="Repository\NHANSURepository.cs" />
     <Compile Include="SO_GD.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
@@ -267,6 +283,7 @@
     <Compile Include="SqlCommandQuangIch\Form1Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form2Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form3Command.cs" />
+    <Compile Include="SqlCommandQuangIch\Form4Command.cs" />
     <Compile Include="SUC_KHOE_NUOI_DUONG.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -283,6 +300,7 @@
     <Compile Include="ViewModel\Form2ViewModel.cs" />
     <Compile Include="ViewModel\Form3InsertUpdateViewModel.cs" />
     <Compile Include="ViewModel\Form3ViewModel.cs" />
+    <Compile Include="ViewModel\Form4ViewModel.cs" />
     <Compile Include="ViewModel\ListItemCapHoc.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -107,5 +107,6 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TONG_KET_C1> TONG_KET_C1 { get; set; }
         public virtual DM_HUYEN DM_HUYEN { get; set; }
+        public virtual DM_KHU_VUC DM_KHU_VUC { get; set; }
     }
 }

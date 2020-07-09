@@ -59,12 +59,8 @@ namespace QuangIchTest.DanhMuc.Form3
         }
         protected void RadGrid1_ItemDataBound(object sender, GridItemEventArgs e)
         {
-
-
-
+            
         }
-
-
         protected void LoadCapHoc(object sender, GridNeedDataSourceEventArgs e)
         {
 
@@ -75,17 +71,10 @@ namespace QuangIchTest.DanhMuc.Form3
             RadGrid1.VirtualItemCount = totalRecord;
             list.Take(RadGrid1.PageSize).Skip(e.StartRowIndex);
             RadGrid1.DataSource = list;
-
-
         }
-
-
-
         protected void btn_Search(object sender, EventArgs e)
         {
             RadGrid1.Rebind();
-
-
         }
         protected void btXoa_Click(object sender, EventArgs e)
         {
@@ -98,8 +87,19 @@ namespace QuangIchTest.DanhMuc.Form3
 
             }
             string listId = listItemId.Substring(0, listItemId.Length - 1);
-            string query = String.Format(Form1Command.deleteMonhocId, listId);
-            dbaProvider.ExecuteCommand(query);
+            string query = String.Format(Form3Command.deleteNhanSuId, listId);
+            try
+            {
+                dbaProvider.ExecuteCommand(query);
+
+            }
+            catch
+            {
+               
+
+
+            }
+            
             System.Threading.Thread.Sleep(1000);
             RadGrid1.Rebind();
 

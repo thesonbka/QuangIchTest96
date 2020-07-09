@@ -33,7 +33,7 @@ namespace DataAccess.ViewModel
         public string MA_MON_DAY { get; set; }
 
         public string MA_SO_NGACH { get; set; }
-        public string PC_THU_HUT { get; set; }
+        public decimal? PC_THU_HUT { get; set; }
         public string MA_TRINH_DO_CHUYEN_MON { get; set; }
 
         public string MA_TRINH_DO_NGOAI_NGU { get; set; }

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/Main.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="QuangIchTest.DanhMuc.Form2.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
@@ -22,7 +21,7 @@
             <telerik:AjaxSetting AjaxControlID="rcbNhomLop">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="rcbNhomTuoi" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
-                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
+                    <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
 
                 </UpdatedControls>
             </telerik:AjaxSetting>
@@ -95,7 +94,7 @@
                 window.radopen("FormEdit.aspx?ID=" + id, "RadWindow1");
                 return false;
             }
-            function ShowInsertForm() {               
+            function ShowInsertForm() {
                 debugger;
                 window.radopen("FormInsert.aspx", "RadWindow1");
                 return false;
@@ -134,28 +133,31 @@
         <!-- nhom chuc nang headerbottom -->
 
         <div id="qi-panel-search" class="fillterFieldsOneRow">
-
-            <div class="form-group">
-                <div class="col-sm-12 col-xs-12">
-                    <label class="control-label pull-left">Chọn nhóm lớp</label>
-                    <div class="col-sm-2 lbleft">
-                        <telerik:RadComboBox ID="rcbNhomLop" runat="server" DataSourceID="objKhoi" DataTextField="TEN" DataValueField="MA" OnSelectedIndexChanged="LoadChangeComboxCapHoc" AutoPostBack="true" Width="100%" CausesValidation="false"
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-4 col-md-4 control-label">
+                       Chọn nhóm lớp
+                    </label>
+                    <div class="col-xs-12 col-sm-8 col-md-8">
+                       <telerik:RadComboBox ID="rcbNhomLop" runat="server" DataSourceID="objKhoi" DataTextField="TEN" DataValueField="MA" OnSelectedIndexChanged="LoadChangeComboxCapHoc" AutoPostBack="true" Width="100%" CausesValidation="false"
                             EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
                         </telerik:RadComboBox>
                         <asp:ObjectDataSource ID="objKhoi" runat="server" SelectMethod="GetItems" TypeName="QuangIchTest.DanhMuc.Form2.BindingData" />
                     </div>
                 </div>
-
-                <label class="control-label pull-left">Chọn nhóm tuổi</label>
-                <div class="col-sm-2 lbleft">
-                    <telerik:RadComboBox ID="rcbNhomTuoi" runat="server" DataTextField="TEN" DataValueField="MA" OnSelectedIndexChanged="LoadChangeComboxNhomTuoi" AutoPostBack="true" Width="100%" CausesValidation="false"
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="col-xs-12 col-sm-4 col-md-4 control-label">
+                       Chọn nhóm tuổi
+                    </label>
+                    <div class="col-xs-12 col-sm-8 col-md-8">
+                       <telerik:RadComboBox ID="rcbNhomTuoi" runat="server" DataTextField="TEN" DataValueField="MA" OnSelectedIndexChanged="LoadChangeComboxNhomTuoi" AutoPostBack="true" Width="100%" CausesValidation="false"
                         EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
                     </telerik:RadComboBox>
-
+                    </div>
                 </div>
             </div>
-
-            <div style="clear: both"></div>
         </div>
         <!-- do du lieu ra radgrid -->
         <div>
@@ -225,10 +227,10 @@
         </div>
     </div>
 
-     <script type="text/javascript">
-         var x = $("#ContentPlaceHolder1_lkbtThemMoi").val();
-         console.log(x);
-         console.log("kick");
+    <script type="text/javascript">
+        var x = $("#ContentPlaceHolder1_lkbtThemMoi").val();
+        console.log(x);
+        console.log("kick");
 
-     </script>
+    </script>
 </asp:Content>
