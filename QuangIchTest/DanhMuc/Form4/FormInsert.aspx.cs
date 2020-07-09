@@ -39,12 +39,63 @@ namespace QuangIchTest.DanhMuc.Form4
             rcbLop.DataBind();
            
         }
-        protected void btn_Save(object sender, EventArgs e)
+        protected void rcbTrangThaiHS_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
 
         }
-
-
-
+        protected void btn_Save(object sender, EventArgs e)
+        {
+            HOC_SINH detail = new HOC_SINH();
+            detail.MA_KHOI = rcbNhomLop.SelectedValue.ToString();
+            detail.MA_LOP = rcbLop.SelectedValue.ToString();
+            detail.MA = txtMa.Text.ToString().Trim();
+            detail.MA_TINH = rcbTinh.SelectedValue.ToString();
+            if (rcbHuyen.SelectedIndex > 0)
+                detail.MA_HUYEN = rcbHuyen.SelectedValue.ToString();
+            if (rcbXa.SelectedIndex > 0)
+                detail.MA_XA = rcbXa.SelectedValue.ToString();
+            detail.HO_TEN = txtHoTen.Text.ToString();
+            detail.NGAY_SINH = DateTime.Parse(dbNgaySinh.SelectedDate.ToString());
+            detail.MA_GIOI_TINH = rcbGioiTinh.SelectedValue.ToString();
+            detail.NOI_SINH = txtNoiinh.Text.ToString().Trim();
+            detail.MA_TRANG_THAI_HIEN_TAI = rcbTrangThaiHS.SelectedValue.ToString();
+            detail.MA_DAN_TOC = rcbDanToc.SelectedValue.ToString();
+            if (rcbQuocTich.SelectedIndex > 0)
+                detail.MA_QUOC_TICH = rcbQuocTich.SelectedValue.ToString();
+            if (rcbLoaiKhuVuc.SelectedIndex > 0)
+                detail.MA_KHU_VUC = rcbLoaiKhuVuc.SelectedValue.ToString();
+            if (chkIsHoc2Buoi.Checked)
+                detail.IS_HOC_2_BUOI = 1;
+            if (chkIsChaDT.Checked)
+                detail.IS_CHA_DT = 1;
+            if (chkIsMeDT.Checked)
+                detail.IS_ME_DT = 1;
+            if (chkhslopbantru.Checked)
+                detail.IS_HOC_SINH_LOP_BTRU = 1;
+            if (rcbBanTru.SelectedIndex > 0)
+                detail.MA_HOC_BAN_TRU = rcbBanTru.SelectedValue.ToString();
+            if (rcbKhuyetTat.SelectedIndex > 0)
+                detail.MA_LOAI_KHUYET_TAT = rcbKhuyetTat.SelectedValue.ToString();
+            if (rcbDoituongCS.SelectedIndex > 0)
+                detail.MA_DIEN_CHINH_SACH = rcbDoituongCS.SelectedValue.ToString();
+            if (!string.IsNullOrEmpty(txtCha.Text))
+                detail.TEN_CHA = txtCha.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(txtMe.Text))
+                detail.TEN_ME = txtMe.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(txtNguoiDoDau.Text))
+                detail.TEN_NGUOI_DD = txtNguoiDoDau.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(txtNgheNghiepCha.Text))
+                detail.NGHE_NGHIEP_CHA = txtNgheNghiepCha.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(txtNgheNghiepMe.Text))
+                detail.NGHE_NGHIEP_ME = txtNgheNghiepMe.Text.ToString().Trim();
+            if (!string.IsNullOrEmpty(txtNgheNgiemDoDau.Text))
+                detail.NGHE_NGHIEP_NGUOI_DD = txtNgheNgiemDoDau.Text.ToString().Trim();
+            detail.MA_CAP_HOC = "01";
+            detail.MA_TRUONG = "10068";
+            detail.MA_NAM_HOC = 2019;
+            
+            context.HOC_SINH.Add(detail);
+            context.SaveChanges();
+        }
     }
 }

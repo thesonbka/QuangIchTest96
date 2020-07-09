@@ -202,13 +202,13 @@ namespace QuangIchTest.DanhMuc.Form4 {
         protected global::System.Web.UI.WebControls.ObjectDataSource objGioiTinh;
         
         /// <summary>
-        /// txtNóiinh control.
+        /// txtNoiinh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNóiinh;
+        protected global::System.Web.UI.WebControls.TextBox txtNoiinh;
         
         /// <summary>
         /// rcbTrangThaiHS control.

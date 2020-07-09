@@ -203,7 +203,7 @@
                     <span class="qi-name-control">Nơi sinh</span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <asp:TextBox ID="txtNóiinh" runat="server" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtNoiinh" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
         </div>
@@ -214,7 +214,7 @@
                     <span class="qi-name-control">Trạng thái HS <span style="color: red">(*)</span></span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox ID="rcbTrangThaiHS" runat="server" DataSourceID="objTrangThai" DataTextField="TEN" DataValueField="MA" Width="100%"
+                    <telerik:RadComboBox ID="rcbTrangThaiHS" runat="server" OnSelectedIndexChanged="rcbTrangThaiHS_SelectedIndexChanged" DataSourceID="objTrangThai" DataTextField="TEN" DataValueField="MA" Width="100%"
                         EmptyMessage="Chọn trạng thái" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
                     </telerik:RadComboBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="rcbTrangThaiHS"
@@ -430,7 +430,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="col-xs-12 col-sm-4 col-md-4 control-label">
-                                        <span class="qi-name-control">Nghề nghiệp cha</span>
+                                        <span class="qi-name-control">Nghề nghiệp mẹ</span>
                                     </label>
                                     <div class="col-xs-12 col-sm-8 col-md-8">
                                         <asp:TextBox ID="txtNgheNghiepMe" runat="server" CssClass="form-control"></asp:TextBox>

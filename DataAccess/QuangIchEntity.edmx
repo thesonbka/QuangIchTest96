@@ -806,6 +806,7 @@
           <Property Name="MA_CONG_DAN" Type="nvarchar" MaxLength="20" />
           <Property Name="MA_LOP_HUONG_NGHIEP_DAY_NGHE" Type="nvarchar" MaxLength="20" />
           <Property Name="MA_IMPORT" Type="nvarchar" MaxLength="100" />
+          <Property Name="MA_HOC_BAN_TRU" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="HOC_SINH_TOT_NGHIEP">
           <Key>
@@ -4651,6 +4652,7 @@
           <NavigationProperty Name="TONG_KET_C1" Relationship="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_HOC_SINH" FromRole="HOC_SINH" ToRole="TONG_KET_C1" />
           <NavigationProperty Name="TONG_KET" Relationship="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_HOC_SINH" FromRole="HOC_SINH" ToRole="TONG_KET" />
           <NavigationProperty Name="DM_HUYEN" Relationship="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_HUYEN" FromRole="HOC_SINH" ToRole="DM_HUYEN" />
+          <Property Name="MA_HOC_BAN_TRU" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="HOC_SINH_TOT_NGHIEP">
           <Key>
@@ -7510,6 +7512,7 @@
           <EntitySetMapping Name="HOC_SINH">
             <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.HOC_SINH">
               <MappingFragment StoreEntitySet="HOC_SINH">
+                <ScalarProperty Name="MA_HOC_BAN_TRU" ColumnName="MA_HOC_BAN_TRU" />
                 <ScalarProperty Name="MA_IMPORT" ColumnName="MA_IMPORT" />
                 <ScalarProperty Name="MA_LOP_HUONG_NGHIEP_DAY_NGHE" ColumnName="MA_LOP_HUONG_NGHIEP_DAY_NGHE" />
                 <ScalarProperty Name="MA_CONG_DAN" ColumnName="MA_CONG_DAN" />

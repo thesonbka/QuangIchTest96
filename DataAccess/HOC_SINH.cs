@@ -106,6 +106,7 @@ namespace DataAccess
         public string MA_CONG_DAN { get; set; }
         public string MA_LOP_HUONG_NGHIEP_DAY_NGHE { get; set; }
         public string MA_IMPORT { get; set; }
+        public string MA_HOC_BAN_TRU { get; set; }
     
         public virtual DM_CAP_HOC DM_CAP_HOC { get; set; }
         public virtual DM_GIOI_TINH DM_GIOI_TINH { get; set; }
