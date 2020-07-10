@@ -133,6 +133,18 @@
           <Property Name="NGAY_SUA" Type="datetime" />
           <Property Name="CAP" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="DM_KENH_TANG_TRUONG_CAN_NANG">
+          <Key>
+            <PropertyRef Name="MA" />
+          </Key>
+          <Property Name="MA" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="TEN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="THU_TU" Type="int" />
+          <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="datetime" />
+          <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="datetime" />
+        </EntityType>
         <EntityType Name="DM_KHOI">
           <Key>
             <PropertyRef Name="ID" />
@@ -1175,6 +1187,11 @@
           <Property Name="NGAY_SUA" Type="datetime" />
           <Property Name="NGUOI_TAO" Type="numeric" Precision="18" Scale="0" />
           <Property Name="NGUOI_SUA" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="CAN_NANG" Type="float" />
+          <Property Name="CHIEU_CAO" Type="float" />
+          <Property Name="IS_SUY_DINH_DUONG_THE_CAP_COI" Type="bit" />
+          <Property Name="IS_SUY_DINH_DUONG_THE_COI_COC" Type="bit" />
+          <Property Name="IS_TRE_BI_BEO_PHI" Type="bit" />
         </EntityType>
         <EntityType Name="TONG_KET">
           <Key>
@@ -2834,6 +2851,7 @@
           <EntitySet Name="DM_HINH_THUC_HOP_DONG" EntityType="Self.DM_HINH_THUC_HOP_DONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_HOC_BAN_TRU" EntityType="Self.DM_HOC_BAN_TRU" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_HUYEN" EntityType="Self.DM_HUYEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DM_KENH_TANG_TRUONG_CAN_NANG" EntityType="Self.DM_KENH_TANG_TRUONG_CAN_NANG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_KHOI" EntityType="Self.DM_KHOI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_KHU_VUC" EntityType="Self.DM_KHU_VUC" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_LOAI_CAN_BO" EntityType="Self.DM_LOAI_CAN_BO" Schema="dbo" store:Type="Tables" />
@@ -3991,6 +4009,7 @@
           <EntitySet Name="DM_LOAI_KHUYET_TAT" EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_KHUYET_TAT" />
           <EntitySet Name="DM_DIEN_CHINH_SACH" EntityType="BO_GIAO_DUC_TEMPModel.DM_DIEN_CHINH_SACH" />
           <EntitySet Name="DM_HOC_BAN_TRU" EntityType="BO_GIAO_DUC_TEMPModel.DM_HOC_BAN_TRU" />
+          <EntitySet Name="DM_KENH_TANG_TRUONG_CAN_NANG" EntityType="BO_GIAO_DUC_TEMPModel.DM_KENH_TANG_TRUONG_CAN_NANG" />
         </EntityContainer>
         <EntityType Name="DM_GIOI_TINH">
           <Key>
@@ -5023,6 +5042,11 @@
           <NavigationProperty Name="PHONG_GD" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_PHONG_GD" FromRole="SUC_KHOE_NUOI_DUONG" ToRole="PHONG_GD" />
           <NavigationProperty Name="SO_GD" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_SO_GD" FromRole="SUC_KHOE_NUOI_DUONG" ToRole="SO_GD" />
           <NavigationProperty Name="TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" FromRole="SUC_KHOE_NUOI_DUONG" ToRole="TRUONG" />
+          <Property Name="CAN_NANG" Type="Double" />
+          <Property Name="CHIEU_CAO" Type="Double" />
+          <Property Name="IS_SUY_DINH_DUONG_THE_CAP_COI" Type="Boolean" />
+          <Property Name="IS_SUY_DINH_DUONG_THE_COI_COC" Type="Boolean" />
+          <Property Name="IS_TRE_BI_BEO_PHI" Type="Boolean" />
         </EntityType>
         <EntityType Name="TONG_KET">
           <Key>
@@ -6831,6 +6855,18 @@
           <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
         </EntityType>
+        <EntityType Name="DM_KENH_TANG_TRUONG_CAN_NANG">
+          <Key>
+            <PropertyRef Name="MA" />
+          </Key>
+          <Property Name="MA" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TEN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="THU_TU" Type="Int32" />
+          <Property Name="NGUOI_TAO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_TAO" Type="DateTime" Precision="3" />
+          <Property Name="NGUOI_SUA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="NGAY_SUA" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -7866,6 +7902,11 @@
           <EntitySetMapping Name="SUC_KHOE_NUOI_DUONG">
             <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.SUC_KHOE_NUOI_DUONG">
               <MappingFragment StoreEntitySet="SUC_KHOE_NUOI_DUONG">
+                <ScalarProperty Name="IS_TRE_BI_BEO_PHI" ColumnName="IS_TRE_BI_BEO_PHI" />
+                <ScalarProperty Name="IS_SUY_DINH_DUONG_THE_COI_COC" ColumnName="IS_SUY_DINH_DUONG_THE_COI_COC" />
+                <ScalarProperty Name="IS_SUY_DINH_DUONG_THE_CAP_COI" ColumnName="IS_SUY_DINH_DUONG_THE_CAP_COI" />
+                <ScalarProperty Name="CHIEU_CAO" ColumnName="CHIEU_CAO" />
+                <ScalarProperty Name="CAN_NANG" ColumnName="CAN_NANG" />
                 <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
                 <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
                 <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
@@ -8451,6 +8492,19 @@
           <EntitySetMapping Name="DM_HOC_BAN_TRU">
             <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.DM_HOC_BAN_TRU">
               <MappingFragment StoreEntitySet="DM_HOC_BAN_TRU">
+                <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
+                <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
+                <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />
+                <ScalarProperty Name="NGUOI_TAO" ColumnName="NGUOI_TAO" />
+                <ScalarProperty Name="THU_TU" ColumnName="THU_TU" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_KENH_TANG_TRUONG_CAN_NANG">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.DM_KENH_TANG_TRUONG_CAN_NANG">
+              <MappingFragment StoreEntitySet="DM_KENH_TANG_TRUONG_CAN_NANG">
                 <ScalarProperty Name="NGAY_SUA" ColumnName="NGAY_SUA" />
                 <ScalarProperty Name="NGUOI_SUA" ColumnName="NGUOI_SUA" />
                 <ScalarProperty Name="NGAY_TAO" ColumnName="NGAY_TAO" />

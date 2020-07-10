@@ -176,6 +176,7 @@
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_KHUYET_TAT" Width="1.5" PointX="7.375" PointY="15" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_DIEN_CHINH_SACH" Width="1.5" PointX="15.375" PointY="1.125" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_HOC_BAN_TRU" Width="1.5" PointX="17.375" PointY="1.125" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_KENH_TANG_TRUONG_CAN_NANG" Width="1.5" PointX="5.375" PointY="19" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

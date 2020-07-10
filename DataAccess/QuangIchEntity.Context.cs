@@ -91,5 +91,6 @@ namespace DataAccess
         public virtual DbSet<DM_LOAI_KHUYET_TAT> DM_LOAI_KHUYET_TAT { get; set; }
         public virtual DbSet<DM_DIEN_CHINH_SACH> DM_DIEN_CHINH_SACH { get; set; }
         public virtual DbSet<DM_HOC_BAN_TRU> DM_HOC_BAN_TRU { get; set; }
+        public virtual DbSet<DM_KENH_TANG_TRUONG_CAN_NANG> DM_KENH_TANG_TRUONG_CAN_NANG { get; set; }
     }
 }

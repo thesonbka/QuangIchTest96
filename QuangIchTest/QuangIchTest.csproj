@@ -123,6 +123,7 @@
     <Content Include="DanhMuc\Form3\FormEdit.aspx" />
     <Content Include="DanhMuc\Form3\FormInsert.aspx" />
     <Content Include="DanhMuc\Form3\index.aspx" />
+    <Content Include="DanhMuc\Form4\FormEdit.aspx" />
     <Content Include="DanhMuc\Form4\FormInsert.aspx" />
     <Content Include="DanhMuc\Form4\index.aspx" />
     <Content Include="DanhMuc\Form5\index.aspx" />
@@ -192,6 +193,13 @@
     <Compile Include="DanhMuc\Form3\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DanhMuc\Form4\FormEdit.aspx.cs">
+      <DependentUpon>FormEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\Form4\FormEdit.aspx.designer.cs">
+      <DependentUpon>FormEdit.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\Form4\FormInsert.aspx.cs">
       <DependentUpon>FormInsert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -208,7 +216,6 @@
     </Compile>
     <Compile Include="DanhMuc\Form5\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DanhMuc\Form5\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>

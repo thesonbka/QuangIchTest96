@@ -1,23 +1,81 @@
 ﻿using DataAccess;
 using DataAccess.Repository;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using Telerik.Web.UI;
-
 namespace QuangIchTest.DanhMuc.Form4
 {
-    public partial class FormInsert : System.Web.UI.Page
+    public partial class FormEdit : System.Web.UI.Page
     {
         BO_GIAO_DUC_TEMPEntities context = new BO_GIAO_DUC_TEMPEntities();
         NHANSURepository resNhanSu = new NHANSURepository();
         HocSinhRepository resHocSinh = new HocSinhRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                int itemID = int.Parse(Request["ID"].ToString());
+                var data = context.HOC_SINH.FirstOrDefault(p => p.ID == itemID);
+                if (data != null)
+                    LoadDataControl(data);
+            }
 
+        }
+        private void LoadDataControl(HOC_SINH data)
+        {
+            rcbNhomLop.SelectedValue = data.MA_KHOI.ToString();
+            rcbLop.DataSource = resHocSinh.getLop(data.MA_KHOI);
+            rcbLop.DataBind();
+            rcbLop.SelectedValue = data.MA_LOP.ToString();
+            txtMa.Text = data.MA.ToString();
+            rcbTinh.SelectedValue = data.MA_TINH.ToString();
+            rcbHuyen.DataSource = resNhanSu.getHuyen(data.MA_TINH);
+            rcbHuyen.DataBind();
+            if (!string.IsNullOrEmpty(data.MA_HUYEN))
+            {
+                rcbHuyen.SelectedValue = data.MA_HUYEN.ToString();
+                rcbXa.DataSource = resNhanSu.getXa(data.MA_TINH, data.MA_HUYEN);
+                rcbXa.DataBind();
+                if(!string.IsNullOrEmpty(data.MA_XA))
+                    rcbXa.SelectedValue = data.MA_XA.ToString();
+            }
+            txtHoTen.Text = data.HO_TEN.ToString().Trim();
+            rcbGioiTinh.SelectedValue = data.MA_GIOI_TINH.ToString().Trim();
+            dbNgaySinh.SelectedDate = data.NGAY_SINH;
+            txtNoiinh.Text = data.NOI_SINH.ToString();
+            rcbDanToc.SelectedValue = data.MA_DAN_TOC.ToString().Trim();
+            rcbTrangThaiHS.SelectedValue = data.MA_TRANG_THAI_HIEN_TAI.ToString().Trim();
+            if (!string.IsNullOrEmpty(data.MA_QUOC_TICH))
+                rcbQuocTich.SelectedValue = data.MA_QUOC_TICH.ToString().Trim();
+            if (!string.IsNullOrEmpty(data.MA_KHU_VUC))
+                rcbLoaiKhuVuc.SelectedValue = data.MA_KHU_VUC.ToString().Trim();
+            if (data.IS_HOC_2_BUOI == 1)
+                chkIsHoc2Buoi.Checked = true;
+            if (data.IS_CHA_DT == 1)
+                chkIsChaDT.Checked = true;
+            if (data.IS_ME_DT == 1)
+                chkIsMeDT.Checked = true;
+            if (data.IS_HOC_SINH_BAN_TRU_DAN_NUOI == 1)
+                chkhslopbantru.Checked = true;
+            if (!string.IsNullOrEmpty(data.MA_HOC_BAN_TRU))
+                rcbBanTru.SelectedValue = data.MA_HOC_BAN_TRU.ToString().Trim();
+            if (!string.IsNullOrEmpty(data.MA_LOAI_KHUYET_TAT))
+                rcbKhuyetTat.SelectedValue = data.MA_LOAI_KHUYET_TAT.ToString().Trim();
+            if (!string.IsNullOrEmpty(data.MA_DIEN_CHINH_SACH))
+                rcbDoituongCS.SelectedValue = data.MA_DIEN_CHINH_SACH.ToString().Trim();
+            if (!string.IsNullOrEmpty(data.TEN_CHA))
+                txtCha.Text = data.TEN_CHA.ToString();
+            if (!string.IsNullOrEmpty(data.TEN_ME))
+                txtMe.Text = data.TEN_ME.ToString();
+            if (!string.IsNullOrEmpty(data.TEN_NGUOI_DD))
+                txtNguoiDoDau.Text = data.TEN_NGUOI_DD.ToString();
+            if (!string.IsNullOrEmpty(data.NGHE_NGHIEP_CHA))
+                txtNgheNghiepCha.Text = data.NGHE_NGHIEP_CHA.ToString();
+            if (!string.IsNullOrEmpty(data.NGHE_NGHIEP_ME))
+                txtNgheNghiepMe.Text = data.NGHE_NGHIEP_ME.ToString();
+            if (!string.IsNullOrEmpty(data.NGHE_NGHIEP_NGUOI_DD))
+                txtNgheNgiemDoDau.Text = data.NGHE_NGHIEP_NGUOI_DD;
         }
         protected void LoadHuyen(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
@@ -37,16 +95,17 @@ namespace QuangIchTest.DanhMuc.Form4
             string nhomLop = rcbNhomLop.SelectedValue;
             rcbLop.DataSource = resHocSinh.getLop(nhomLop);
             rcbLop.DataBind();
-           
+            rcbLop.SelectedIndex = 0;
+
         }
         protected void rcbTrangThaiHS_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            
 
         }
         protected void btn_Save(object sender, EventArgs e)
         {
             HOC_SINH detail = new HOC_SINH();
+            detail.ID = int.Parse(Request["ID"].ToString());
             detail.MA_KHOI = rcbNhomLop.SelectedValue.ToString();
             detail.MA_LOP = rcbLop.SelectedValue.ToString();
             detail.MA = txtMa.Text.ToString().Trim();
@@ -94,9 +153,17 @@ namespace QuangIchTest.DanhMuc.Form4
             detail.MA_CAP_HOC = "01";
             detail.MA_TRUONG = "14150";
             detail.MA_NAM_HOC = 2016;
-            
-            context.HOC_SINH.Add(detail);
-            context.SaveChanges();
+
+            try
+            {
+                context.Entry(detail).State = System.Data.Entity.EntityState.Modified;
+                context.SaveChanges();
+            }
+            catch
+            {
+
+            }
+
             ClientScriptManager cs = Page.ClientScript;
             cs.RegisterStartupScript(typeof(Page), "CloseScript_" + UniqueID, "CloseAndRebind();", true);
         }

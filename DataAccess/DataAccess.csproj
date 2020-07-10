@@ -100,6 +100,9 @@
     <Compile Include="DM_HUYEN.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_KENH_TANG_TRUONG_CAN_NANG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_KHOI.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -277,6 +280,7 @@
     <Compile Include="Repository\Form1Repository.cs" />
     <Compile Include="Repository\HocSinhRepository.cs" />
     <Compile Include="Repository\NHANSURepository.cs" />
+    <Compile Include="Repository\SucKhoeNuoiDuongRepository.cs" />
     <Compile Include="SO_GD.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -284,6 +288,7 @@
     <Compile Include="SqlCommandQuangIch\Form2Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form3Command.cs" />
     <Compile Include="SqlCommandQuangIch\Form4Command.cs" />
+    <Compile Include="SqlCommandQuangIch\Form5Command.cs" />
     <Compile Include="SUC_KHOE_NUOI_DUONG.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -301,6 +306,7 @@
     <Compile Include="ViewModel\Form3InsertUpdateViewModel.cs" />
     <Compile Include="ViewModel\Form3ViewModel.cs" />
     <Compile Include="ViewModel\Form4ViewModel.cs" />
+    <Compile Include="ViewModel\Form5ViewModel.cs" />
     <Compile Include="ViewModel\ListItemCapHoc.cs" />
   </ItemGroup>
   <ItemGroup />
