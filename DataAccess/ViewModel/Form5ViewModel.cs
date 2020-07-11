@@ -18,9 +18,9 @@ namespace DataAccess.ViewModel
 
         public double? CANNANG { get; set; }
         public string TENCANTANGTRUONG { get; set; }
-        public string SUYDINHDUONGTHETHAPCOI { get; set; }
-        public string SUYDINHDUONGTHECOICOC { get; set; }
-        public string TREBIBEOPHI { get; set; }
+        public bool SUYDINHDUONGTHETHAPCOI { get; set; }
+        public bool SUYDINHDUONGTHECOICOC { get; set; }
+        public bool TREBIBEOPHI { get; set; }
        
     }
 }

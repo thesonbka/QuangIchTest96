@@ -59,13 +59,11 @@
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.PHONG_BAN" Width="1.5" PointX="14.25" PointY="46.875" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.PHONG_GD" Width="1.5" PointX="3" PointY="19" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.SO_GD" Width="1.5" PointX="3.75" PointY="29.25" />
-        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.SUC_KHOE_NUOI_DUONG" Width="1.5" PointX="24.5" PointY="14.5" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TONG_KET" Width="1.5" PointX="21.5" PointY="0.75" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TONG_KET_C1" Width="1.5" PointX="27.5" PointY="2.875" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.TRUONG" Width="1.5" PointX="14.25" PointY="11" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_CAP_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHOM_QUYEN_DM_CAP_HOC" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_DM_CAP_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_DM_CAP_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_DM_CAP_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_DM_GIOI_TINH" />
@@ -108,7 +106,6 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_PHONG_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TRUONG" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_HOC_SINH" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_HOC_SINH" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_HOC_SINH" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_HOC_SINH_TOT_NGHIEP_LOP" />
@@ -120,7 +117,6 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_PHONG_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_TRUONG" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_LOP" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_LOP" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_LOP" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_NAM_HOC" />
@@ -129,7 +125,6 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_MON_TRUONG" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHAN_SU_NAM_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_NAM_HOC" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_NAM_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_NAM_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_NAM_HOC" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_NAM_HOC" />
@@ -140,15 +135,12 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_NHOM_QUYEN_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_BAN_NHOM_QUYEN" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_SO_GD" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_PHONG_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_PHONG_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_PHONG_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_PHONG_GD" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_SO_GD" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_SO_GD" />
-        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_TRUONG" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_TRUONG" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_DAN_TOC" Width="1.5" PointX="5.375" PointY="1" />
@@ -177,7 +169,17 @@
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_DIEN_CHINH_SACH" Width="1.5" PointX="15.375" PointY="1.125" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_HOC_BAN_TRU" Width="1.5" PointX="17.375" PointY="1.125" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_KENH_TANG_TRUONG_CAN_NANG" Width="1.5" PointX="5.375" PointY="19" />
-      </Diagram>
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.SUC_KHOE_NUOI_DUONG" Width="1.5" PointX="24.5" PointY="14.5" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_DM_CAP_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_HOC_SINH" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_LOP" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_HINH" Width="1.5" PointX="24.375" PointY="1.25" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_LOAI_HINH" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

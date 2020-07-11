@@ -22,13 +22,21 @@ namespace DataAccess.Repository
                             GIOITINH = context.DM_GIOI_TINH.FirstOrDefault(k=>k.MA ==context.HOC_SINH.FirstOrDefault(p=>p.ID==obj.ID_HOC_SINH).MA_GIOI_TINH).TEN,
                             CHIEUCAO = obj.CHIEU_CAO,
                             CANNANG = obj.CAN_NANG,
-                            TENCANTANGTRUONG = context.DM_KENH_TANG_TRUONG_CAN_NANG.FirstOrDefault(p=>p.MA==obj.MA_KENH_TANG_TRUONG_CAN_NANG_KY1).TEN,
-                            
-                           
+                            SUYDINHDUONGTHETHAPCOI = obj.IS_SUY_DINH_DUONG_THE_THAP_COI==1?true:false,
+                            SUYDINHDUONGTHECOICOC = obj.IS_SUY_DINH_DUONG_THE_COI_COC==1?true:false,
+                            TREBIBEOPHI =  obj.IS_TRE_BI_BEO_PHI==1?true:false,
+                            TENCANTANGTRUONG = obj.MA_KENH_TANG_TRUONG_CAN_NANG_KY1
+
                         };
           
             totalRecord = query.Count();
             return query.ToList();
+        }
+        public SUC_KHOE_NUOI_DUONG getById(int Id)
+        {
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            return context.SUC_KHOE_NUOI_DUONG.AsNoTracking().FirstOrDefault(p => p.ID == Id);
+
         }
 
     }

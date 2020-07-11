@@ -7,6 +7,29 @@ namespace DataAccess.Repository
 {
     public class HocSinhRepository
     {
+        public List<ListItem> getLoaiHinh()
+        {
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            var query = from obj in context.DM_LOAI_HINH
+                        select new ListItem
+                        {
+                            MA = obj.MA,
+                            TEN = obj.TEN
+                        };
+            return query.ToList();
+        }
+
+        public List<ListItem> getKenhTangtruongCanNang()
+        {
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            var query = from obj in context.DM_KENH_TANG_TRUONG_CAN_NANG
+                        select new ListItem
+                        {
+                            MA = obj.MA,
+                            TEN = obj.TEN
+                        };
+            return query.ToList();
+        }
         public List<ListItem> getHocBantru()
         {
             var context = new BO_GIAO_DUC_TEMPEntities();

@@ -43,9 +43,9 @@ namespace DataAccess
         public Nullable<decimal> NGUOI_SUA { get; set; }
         public Nullable<double> CAN_NANG { get; set; }
         public Nullable<double> CHIEU_CAO { get; set; }
-        public Nullable<bool> IS_SUY_DINH_DUONG_THE_CAP_COI { get; set; }
-        public Nullable<bool> IS_SUY_DINH_DUONG_THE_COI_COC { get; set; }
-        public Nullable<bool> IS_TRE_BI_BEO_PHI { get; set; }
+        public Nullable<int> IS_SUY_DINH_DUONG_THE_COI_COC { get; set; }
+        public Nullable<int> IS_TRE_BI_BEO_PHI { get; set; }
+        public Nullable<int> IS_SUY_DINH_DUONG_THE_THAP_COI { get; set; }
     
         public virtual DM_CAP_HOC DM_CAP_HOC { get; set; }
         public virtual HOC_SINH HOC_SINH { get; set; }

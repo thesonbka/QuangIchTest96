@@ -22,9 +22,9 @@ namespace DataAccess
             this.LOPs = new HashSet<LOP>();
             this.LOP_MON = new HashSet<LOP_MON>();
             this.NHAN_SU = new HashSet<NHAN_SU>();
-            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
             this.TONG_KET = new HashSet<TONG_KET>();
             this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
+            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
         }
     
         public decimal ID { get; set; }
@@ -101,12 +101,13 @@ namespace DataAccess
         public virtual PHONG_GD PHONG_GD { get; set; }
         public virtual SO_GD SO_GD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TONG_KET> TONG_KET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TONG_KET_C1> TONG_KET_C1 { get; set; }
         public virtual DM_HUYEN DM_HUYEN { get; set; }
         public virtual DM_KHU_VUC DM_KHU_VUC { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
+        public virtual DM_LOAI_HINH DM_LOAI_HINH { get; set; }
     }
 }

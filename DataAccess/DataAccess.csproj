@@ -112,6 +112,9 @@
     <Compile Include="DM_LOAI_CAN_BO.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
+    <Compile Include="DM_LOAI_HINH.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_LOAI_KHUYET_TAT.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -281,6 +284,7 @@
     <Compile Include="Repository\HocSinhRepository.cs" />
     <Compile Include="Repository\NHANSURepository.cs" />
     <Compile Include="Repository\SucKhoeNuoiDuongRepository.cs" />
+    <Compile Include="Repository\ThongKeRepository.cs" />
     <Compile Include="SO_GD.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
@@ -307,6 +311,7 @@
     <Compile Include="ViewModel\Form3ViewModel.cs" />
     <Compile Include="ViewModel\Form4ViewModel.cs" />
     <Compile Include="ViewModel\Form5ViewModel.cs" />
+    <Compile Include="ViewModel\Form6ViewModel.cs" />
     <Compile Include="ViewModel\ListItemCapHoc.cs" />
   </ItemGroup>
   <ItemGroup />

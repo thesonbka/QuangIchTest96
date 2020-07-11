@@ -75,7 +75,6 @@ namespace DataAccess
         public virtual DbSet<PHONG_BAN> PHONG_BAN { get; set; }
         public virtual DbSet<PHONG_GD> PHONG_GD { get; set; }
         public virtual DbSet<SO_GD> SO_GD { get; set; }
-        public virtual DbSet<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
         public virtual DbSet<TONG_KET> TONG_KET { get; set; }
         public virtual DbSet<TONG_KET_C1> TONG_KET_C1 { get; set; }
         public virtual DbSet<TRUONG> TRUONGs { get; set; }
@@ -92,5 +91,7 @@ namespace DataAccess
         public virtual DbSet<DM_DIEN_CHINH_SACH> DM_DIEN_CHINH_SACH { get; set; }
         public virtual DbSet<DM_HOC_BAN_TRU> DM_HOC_BAN_TRU { get; set; }
         public virtual DbSet<DM_KENH_TANG_TRUONG_CAN_NANG> DM_KENH_TANG_TRUONG_CAN_NANG { get; set; }
+        public virtual DbSet<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
+        public virtual DbSet<DM_LOAI_HINH> DM_LOAI_HINH { get; set; }
     }
 }

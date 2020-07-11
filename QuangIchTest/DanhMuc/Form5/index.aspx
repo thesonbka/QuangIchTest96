@@ -7,15 +7,15 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
     <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
         <AjaxSettings>
-            <telerik:AjaxSetting AjaxControlID="RadGrid1">
+         <%--   <telerik:AjaxSetting AjaxControlID="RadGrid1">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
-            </telerik:AjaxSetting>
+            </telerik:AjaxSetting>--%>
             <telerik:AjaxSetting AjaxControlID="rcbNhomLop">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="rcbLop" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
-                    <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
+                   <telerik:AjaxUpdatedControl ControlID="RadGrid1" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
             <telerik:AjaxSetting AjaxControlID="rcbLop">
@@ -132,7 +132,7 @@
         <telerik:RadGrid ID="RadGrid1" runat="server" Height="700px" ShowStatusBar="true"
             AllowMultiRowSelection="True"
             AutoGenerateColumns="False" PageSize="15"
-            AllowPaging="True" AllowCustomPaging="True" OnItemCreated="RadGrid1_ItemCreated" OnNeedDataSource="LoadDataGrid">
+            AllowPaging="True" AllowCustomPaging="True"  OnNeedDataSource="LoadDataGrid"  OnItemDataBound="RadGrid1_ItemDataBound">
 
             <ClientSettings>
                 <Selecting AllowRowSelect="true" EnableDragToSelectRows="true"></Selecting>
@@ -169,42 +169,52 @@
 
                     <telerik:GridTemplateColumn DataField="CANNANG" HeaderText="Cân nặng" UniqueName="CANNANG">
                         <ItemTemplate>
-                            <telerik:RadNumericTextBox Width="80px"  ID="txtCanNang" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
-                                <NumberFormat GroupSeparator="" DecimalDigits="2" />
+                           
+                            <telerik:RadNumericTextBox Width="80px" Value='<%# Eval("CANNANG") %>' ID="txtCanNang" runat="server" CssClass="form-control" MinValue="0" MaxValue="100" >
+                                <NumberFormat GroupSeparator="" DecimalDigits="2" /> 
                             </telerik:RadNumericTextBox>
-                        </ItemTemplate>                       
+                            <span> Kg</span>
+                        </ItemTemplate>
                     </telerik:GridTemplateColumn>
 
                     <telerik:GridTemplateColumn DataField="CHIEUCAO" HeaderText="Chiều cao" UniqueName="CHIEUCAO">
                         <ItemTemplate>
-                             <telerik:RadNumericTextBox ID="txtCHIEUCAO" Width="80px" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
+                            
+                            <telerik:RadNumericTextBox Value='<%# Eval("CHIEUCAO") %>' ID="txtCHIEUCAO" Width="80px" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
                                 <NumberFormat GroupSeparator="" DecimalDigits="2" />
-                            </telerik:RadNumericTextBox>                           
-                        </ItemTemplate>                       
+                            </telerik:RadNumericTextBox>
+                              <span> m</span>
+                        </ItemTemplate>
                     </telerik:GridTemplateColumn>
-
-
-                    <telerik:GridBoundColumn DataField="TENCANTANGTRUONG" HeaderText="Kênh tăng trưởng cân nặng" SortExpression="TENCANTANGTRUONG"
-                        UniqueName="TENCANTANGTRUONG">
-                    </telerik:GridBoundColumn>
+                    <telerik:GridTemplateColumn UniqueName="TENCANTANGTRUONG" HeaderStyle-Width="300px"  DataField="TENCANTANGTRUONG" HeaderText="Kênh tăng trưởng cân nặng" AllowFiltering="false">
+                        <ItemTemplate>
+                            <asp:HiddenField ID="hdMA_KENH_TANG_TRUONG_CAN_NANG" runat="server" Value='<%# Eval("TENCANTANGTRUONG") %>' />
+                            
+                            <telerik:RadComboBox ID="rcbKenhTangTruongCanNang" runat="server" DataSourceID="objKenhTangTruong" DataTextField="TEN" DataValueField="MA" Width="100%"
+                                EmptyMessage="Chọn" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains" >
+                            </telerik:RadComboBox>                           
+                            
+                        </ItemTemplate>
+                    </telerik:GridTemplateColumn>                  
                     <telerik:GridTemplateColumn UniqueName="SUYDINHDUONGTHETHAPCOI" DataField="SUYDINHDUONGTHETHAPCOI" HeaderText="Suy dinh dưỡng thẻ thấp còi" AllowFiltering="false">
                         <ItemTemplate>
-                            <asp:CheckBox ID="chkTheThapCoi" runat="server" AutoPostBack="true" OnCheckedChanged="chkTheThapCoi_CheckedChanged" />
-                        </ItemTemplate>                       
+                            <asp:CheckBox ID="chkTheThapCoi" Checked='<%#Eval("SUYDINHDUONGTHETHAPCOI")%>' runat="server" AutoPostBack="true"  />
+                        </ItemTemplate>
                     </telerik:GridTemplateColumn>
                     <telerik:GridTemplateColumn UniqueName="SUYDINHDUONGTHECOICOC" DataField="SUYDINHDUONGTHECOICOC" HeaderText="Suy dinh dưỡng thẻ còi cọc" AllowFiltering="false">
                         <ItemTemplate>
-                           <asp:CheckBox ID="chkTheCoiCoc" runat="server" />
-                        </ItemTemplate>                       
+                            <asp:CheckBox ID="chkTheCoiCoc" Checked='<%#Eval("SUYDINHDUONGTHECOICOC")%>' runat="server" />
+                        </ItemTemplate>
                     </telerik:GridTemplateColumn>
                     <telerik:GridTemplateColumn UniqueName="TREBIBEOPHI" DataField="TREBIBEOPHI" HeaderText="Trẻ bị béo phì" AllowFiltering="false">
                         <ItemTemplate>
-                           <asp:CheckBox ID="chkTreBeoPhi" runat="server" />
-                        </ItemTemplate>                        
+                            <asp:CheckBox ID="chkTreBeoPhi" Checked='<%#Eval("TREBIBEOPHI")%>'  runat="server" />
+                        </ItemTemplate>
                     </telerik:GridTemplateColumn>
                 </Columns>
             </MasterTableView>
         </telerik:RadGrid>
+        <asp:ObjectDataSource ID="objKenhTangTruong" runat="server" SelectMethod="getKenhTangtruongCanNang" TypeName="DataAccess.Repository.HocSinhRepository" />
         <telerik:RadWindowManager RenderMode="Lightweight" ID="RadWindowManager1" runat="server" EnableShadow="true">
             <Windows>
                 <telerik:RadWindow RenderMode="Lightweight" ID="RadWindow1" runat="server" ShowContentDuringLoad="false" Width="1100px"

@@ -25,11 +25,11 @@ namespace DataAccess
             this.LOP_MON = new HashSet<LOP_MON>();
             this.NHAN_SU = new HashSet<NHAN_SU>();
             this.PHONG_GD = new HashSet<PHONG_GD>();
-            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
             this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
             this.TONG_KET = new HashSet<TONG_KET>();
             this.TRUONGs = new HashSet<TRUONG>();
             this.DM_HUYEN = new HashSet<DM_HUYEN>();
+            this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
         }
     
         public int MA { get; set; }
@@ -56,8 +56,6 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHONG_GD> PHONG_GD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TONG_KET_C1> TONG_KET_C1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TONG_KET> TONG_KET { get; set; }
@@ -65,5 +63,7 @@ namespace DataAccess
         public virtual ICollection<TRUONG> TRUONGs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DM_HUYEN> DM_HUYEN { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
     }
 }
