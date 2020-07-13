@@ -284,6 +284,7 @@
     <Compile Include="Repository\HocSinhRepository.cs" />
     <Compile Include="Repository\NHANSURepository.cs" />
     <Compile Include="Repository\SucKhoeNuoiDuongRepository.cs" />
+    <Compile Include="Repository\ThongkeNhaTreRepository.cs" />
     <Compile Include="Repository\ThongKeRepository.cs" />
     <Compile Include="SO_GD.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
@@ -313,6 +314,7 @@
     <Compile Include="ViewModel\Form5ViewModel.cs" />
     <Compile Include="ViewModel\Form6ViewModel.cs" />
     <Compile Include="ViewModel\ListItemCapHoc.cs" />
+    <Compile Include="ViewModel\ThongKeNhaTreViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -54,41 +54,7 @@
                 }
             }
 
-            function rcbHinhThucHopDongOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTaskHinhThucHopDong();
-            }
-            function rcbLoaiCBOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTaskPhuCapChucVuLanhDao();
-            }
-            function rcbNhomCBOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask();
-            }
-
-            function rcbNgoaiNguOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask1();
-            }
-
-            function rcbTrinhDoDaoTaoNgoaiNguOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask1();
-            }
-
-            function rcbNhomCChiNNguOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask1();
-            }
-
-            function rcbLoaiCChiNNguOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask1();
-            }
-
-            function rcbKhungNLucNNguOnClientSelectedIndexChanged(sender, eventArgs) {
-                setValidTask1();
-            }
-            function pageLoad() {
-                setValidTask();
-                setValidTask1();
-                setValidTaskHinhThucHopDong();
-                setValidTaskPhuCapChucVuLanhDao();
-            }
+            
         </script>
 
     </telerik:RadCodeBlock>

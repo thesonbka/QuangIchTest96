@@ -1,12 +1,9 @@
-﻿using System;
+﻿using DataAccess;
+using DataAccess.Repository;
+using DataAccess.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using DataAccess.Repository;
-using DataAccess;
-using DataAccess.ViewModel;
 using Telerik.Web.UI;
 
 namespace QuangIchTest.DanhMuc.Form6
@@ -17,10 +14,13 @@ namespace QuangIchTest.DanhMuc.Form6
         ThongKeRepository resThongKe = new ThongKeRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
 
         }
         protected void LoadDataGridGioiTinh(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
+
             RadGrid1.Rebind();
         }
         protected void LoadDataGridDanToc(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
@@ -40,8 +40,8 @@ namespace QuangIchTest.DanhMuc.Form6
             RadGrid1.VirtualItemCount = totalRecord;
             list.Take(RadGrid1.PageSize).Skip(e.StartRowIndex);
             RadGrid1.DataSource = list;
-            
-           
+
+
         }
     }
 }

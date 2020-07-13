@@ -44,7 +44,7 @@
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
                     <telerik:RadComboBox ID="rcbLoaiHinh" runat="server" DataSourceID="objLoaiHinh" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridLoaiHinh">
+                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridLoaiHinh" >
                     </telerik:RadComboBox>
                     <asp:ObjectDataSource ID="objLoaiHinh" runat="server" SelectMethod="getLoaiHinh" TypeName="DataAccess.Repository.HocSinhRepository" />
 
@@ -72,8 +72,9 @@
                     <span class="qi-name-control">Giới tính</span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox ID="rcbGioiTinh" runat="server" DataSourceID="objGioiTinh" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridGioiTinh">
+                    <telerik:RadComboBox EmptyMessage="Chọn" ID="rcbGioiTinh" runat="server" DataSourceID="objGioiTinh" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
+                         AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridGioiTinh" EnableLoadOnDemand="true" >
+                      
                     </telerik:RadComboBox>
                     <asp:ObjectDataSource ID="objGioiTinh" runat="server" SelectMethod="getGioiTinh" TypeName="DataAccess.Repository.NHANSURepository" />
                 </div>
