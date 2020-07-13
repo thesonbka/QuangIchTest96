@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using DataAccess.Repository;
 using DataAccess;
 using DataAccess.ViewModel;
+using Telerik.Web.UI;
 
 namespace QuangIchTest.DanhMuc.Form6
 {
@@ -18,9 +19,26 @@ namespace QuangIchTest.DanhMuc.Form6
         {
 
         }
+        protected void LoadDataGridGioiTinh(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            RadGrid1.Rebind();
+        }
+        protected void LoadDataGridDanToc(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            RadGrid1.Rebind();
+        }
+        protected void LoadDataGridLoaiHinh(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            RadGrid1.Rebind();
+        }
         protected void RadGrid1_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
         {
-            List<Form6ViewModel> list = resThongKe.getPage();
+            string loaiHinh = rcbLoaiHinh.SelectedValue;
+            string danToc = rcbDanToc.SelectedValue;
+            string gioiTinh = rcbGioiTinh.SelectedValue;
+            List<Form6ViewModel> list = resThongKe.getPage(loaiHinh, danToc, gioiTinh, out int totalRecord);
+            RadGrid1.VirtualItemCount = totalRecord;
+            list.Take(RadGrid1.PageSize).Skip(e.StartRowIndex);
             RadGrid1.DataSource = list;
             
            

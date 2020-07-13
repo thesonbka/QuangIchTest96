@@ -44,7 +44,7 @@
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
                     <telerik:RadComboBox ID="rcbLoaiHinh" runat="server" DataSourceID="objLoaiHinh" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
+                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridLoaiHinh">
                     </telerik:RadComboBox>
                     <asp:ObjectDataSource ID="objLoaiHinh" runat="server" SelectMethod="getLoaiHinh" TypeName="DataAccess.Repository.HocSinhRepository" />
 
@@ -59,7 +59,7 @@
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
                     <telerik:RadComboBox ID="rcbDanToc" runat="server" DataSourceID="objDanToc" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
+                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridDanToc">
                     </telerik:RadComboBox>
                     <asp:ObjectDataSource ID="objDanToc" runat="server" SelectMethod="getDanToc" TypeName="DataAccess.Repository.NHANSURepository" />
                 </div>
@@ -73,7 +73,7 @@
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
                     <telerik:RadComboBox ID="rcbGioiTinh" runat="server" DataSourceID="objGioiTinh" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains">
+                        EmptyMessage="Chọn" AllowCustomText="true" Filter="Contains" OnSelectedIndexChanged="LoadDataGridGioiTinh">
                     </telerik:RadComboBox>
                     <asp:ObjectDataSource ID="objGioiTinh" runat="server" SelectMethod="getGioiTinh" TypeName="DataAccess.Repository.NHANSURepository" />
                 </div>
@@ -83,7 +83,7 @@
     </div>
     <!-- do du lieu ra radgrid -->
     <telerik:RadGrid ID="RadGrid1" runat="server" AllowPaging="True" GroupPanelPosition="Top" OnNeedDataSource="RadGrid1_NeedDataSource"
-        AutoGenerateColumns="False" PageSize="100">
+        AutoGenerateColumns="False" PageSize="10" Height="550px" >
         <ClientSettings>
             <Scrolling AllowScroll="True" UseStaticHeaders="True" SaveScrollPosition="true"></Scrolling>
         </ClientSettings>
@@ -114,24 +114,24 @@
                 </telerik:GridBoundColumn>
                 <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE3TO12" FilterControlAltText="Filter NT_3_12 column" HeaderText="Trẻ 3 - 12 tháng" SortExpression="NT_3_12" UniqueName="NT_3_12" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NT_13_24" FilterControlAltText="Filter NT_13_24 column" HeaderText="Trẻ 13 - 24 tháng" SortExpression="NT_13_24" UniqueName="NT_13_24" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE13TO24" FilterControlAltText="Filter NT_13_24 column" HeaderText="Trẻ 13 - 24 tháng" SortExpression="NT_13_24" UniqueName="NT_13_24" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NT_25_36" FilterControlAltText="Filter NT_25_36 column" HeaderText="Trẻ 25 - 36 tháng" SortExpression="NT_25_36" UniqueName="NT_25_36" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE25TO36" FilterControlAltText="Filter NT_25_36 column" HeaderText="Trẻ 25 - 36 tháng" SortExpression="NT_25_36" UniqueName="NT_25_36" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NT_36" FilterControlAltText="Filter NT_36 column" HeaderText="Trẻ từ 36 tháng trở lên" SortExpression="NT_36" UniqueName="NT_36" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE36TO" FilterControlAltText="Filter NT_36 column" HeaderText="Trẻ từ 36 tháng trở lên" SortExpression="NT_36" UniqueName="NT_36" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
 
                 <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG" DataField="MAUGIAOTONGSOHOCSINH" FilterControlAltText="Filter MG_TONG_SO column" HeaderText="Tổng số" SortExpression="MG_TONG_SO" UniqueName="MG_TONG_SO" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MG_3" FilterControlAltText="Filter MG_3 column" HeaderText="Trẻ dưới 3 tuổi" SortExpression="MG_3" UniqueName="MG_3" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTREDUOI3T" FilterControlAltText="Filter MG_3 column" HeaderText="Trẻ dưới 3 tuổi" SortExpression="MG_3" UniqueName="MG_3" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MG_3_4" FilterControlAltText="Filter MG_3_4 column" HeaderText="Trẻ 3 - 4 tuổi" SortExpression="MG_3_4" UniqueName="MG_3_4" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE3TO4T" FilterControlAltText="Filter MG_3_4 column" HeaderText="Trẻ 3 - 4 tuổi" SortExpression="MG_3_4" UniqueName="MG_3_4" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MG_4_5" FilterControlAltText="Filter MG_4_5 column" HeaderText="Trẻ 4 - 5 tuổi" SortExpression="MG_4_5" UniqueName="MG_4_5" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE4T5T" FilterControlAltText="Filter MG_4_5 column" HeaderText="Trẻ 4 - 5 tuổi" SortExpression="MG_4_5" UniqueName="MG_4_5" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MG_5_6" FilterControlAltText="Filter MG_5_6 column" HeaderText="Trẻ 5 - 6 tuổi" SortExpression="MG_5_6" UniqueName="MG_5_6" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE5T6T" FilterControlAltText="Filter MG_5_6 column" HeaderText="Trẻ 5 - 6 tuổi" SortExpression="MG_5_6" UniqueName="MG_5_6" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MG_6" FilterControlAltText="Filter MG_6 column" HeaderText="Trẻ trên 6 tuổi" SortExpression="MG_6" UniqueName="MG_6" ItemStyle-HorizontalAlign="Right">
+                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRETEN6T" FilterControlAltText="Filter MG_6 column" HeaderText="Trẻ trên 6 tuổi" SortExpression="MG_6" UniqueName="MG_6" ItemStyle-HorizontalAlign="Right">
                 </telerik:GridBoundColumn>
 
             </Columns>

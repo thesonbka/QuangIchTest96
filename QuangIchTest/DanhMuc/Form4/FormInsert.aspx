@@ -70,6 +70,17 @@
                     <telerik:AjaxUpdatedControl ControlID="rcbXa" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
+             <telerik:AjaxSetting AjaxControlID="rcbSoGD">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="rcbPhongGD" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+             <telerik:AjaxSetting AjaxControlID="rcbPhongGD">
+                <UpdatedControls>
+                    <telerik:AjaxUpdatedControl ControlID="rcbTruong" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
+                </UpdatedControls>
+            </telerik:AjaxSetting>
+
             <telerik:AjaxSetting AjaxControlID="rcbNhomLop">
                 <UpdatedControls>
                     <telerik:AjaxUpdatedControl ControlID="rcbLop" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
@@ -225,9 +236,6 @@
                 </div>
             </div>
         </div>
-
-       
-
         <div class="col-md-6">
             <div class="form-group">
                 <label class="col-xs-12 col-sm-4 col-md-4 control-label">
@@ -245,6 +253,61 @@
                 </div>
             </div>
         </div>
+        
+         <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-4 col-md-4 control-label">
+                    <span class="qi-name-control">Sở GD<span style="color: red">(*)</span></span>
+                </label>
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <telerik:RadComboBox ID="rcbSoGD" runat="server" DataSourceID="objSoGiaoDuc" DataTextField="TEN" DataValueField="MA" Width="100%"
+                        EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
+                    </telerik:RadComboBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="rcbSoGD"
+                        ForeColor="Red" ErrorMessage="Sở GD bắt buộc nhập" Display="Dynamic"
+                        SetFocusOnError="true"> 
+                    </asp:RequiredFieldValidator>
+                    <asp:ObjectDataSource ID="objSoGiaoDuc" runat="server" SelectMethod="getSoGD" TypeName="DataAccess.Repository.NHANSURepository" />
+                </div>
+            </div>
+        </div>
+
+        <%-- <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-4 col-md-4 control-label">
+                    <span class="qi-name-control">Phòng GD<span style="color: red">(*)</span></span>
+                </label>
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <telerik:RadComboBox ID="rcbPhongGD" runat="server" OnSelectedIndexChanged="LoadTruong"  DataTextField="TEN" DataValueField="MA" Width="100%"
+                        EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
+                    </telerik:RadComboBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="rcbPhongGD"
+                        ForeColor="Red" ErrorMessage="Sở GD bắt buộc nhập" Display="Dynamic"
+                        SetFocusOnError="true"> 
+                    </asp:RequiredFieldValidator>
+                  
+                </div>
+            </div>
+        </div>
+
+         <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-xs-12 col-sm-4 col-md-4 control-label">
+                    <span class="qi-name-control">Trường<span style="color: red">(*)</span></span>
+                </label>
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <telerik:RadComboBox ID="rcbTruong" runat="server" DataTextField="TEN" DataValueField="MA" Width="100%"
+                        EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
+                    </telerik:RadComboBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="rcbTruong"
+                        ForeColor="Red" ErrorMessage="Trường bắt buộc nhập" Display="Dynamic"
+                        SetFocusOnError="true"> 
+                    </asp:RequiredFieldValidator>
+                   
+                </div>
+            </div>
+        </div>--%>
+
 
         <div class="col-md-6">
             <div class="form-group">

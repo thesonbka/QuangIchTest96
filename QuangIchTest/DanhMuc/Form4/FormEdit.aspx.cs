@@ -76,6 +76,7 @@ namespace QuangIchTest.DanhMuc.Form4
                 txtNgheNghiepMe.Text = data.NGHE_NGHIEP_ME.ToString();
             if (!string.IsNullOrEmpty(data.NGHE_NGHIEP_NGUOI_DD))
                 txtNgheNgiemDoDau.Text = data.NGHE_NGHIEP_NGUOI_DD;
+            rcbSoGD.SelectedValue = data.MA_SO_GD;
         }
         protected void LoadHuyen(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
@@ -150,8 +151,10 @@ namespace QuangIchTest.DanhMuc.Form4
                 detail.NGHE_NGHIEP_ME = txtNgheNghiepMe.Text.ToString().Trim();
             if (!string.IsNullOrEmpty(txtNgheNgiemDoDau.Text))
                 detail.NGHE_NGHIEP_NGUOI_DD = txtNgheNgiemDoDau.Text.ToString().Trim();
+            detail.MA_SO_GD = rcbSoGD.SelectedValue;
             detail.MA_CAP_HOC = "01";
             detail.MA_TRUONG = "14150";
+            detail.ID_TRUONG = 14150;
             detail.MA_NAM_HOC = 2016;
 
             try

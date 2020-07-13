@@ -74,6 +74,18 @@ namespace DataAccess.Repository
             return query.ToList();
 
         }
+        public List<ListItem> getSoGD()
+        {
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            var query = from obj in context.SO_GD
+                        select new ListItem
+                        {
+                            MA = obj.MA,
+                            TEN = obj.TEN
+                        };
+            return query.ToList();
+
+        }
         public List<ListItem> getTonGiao()
         {
 
@@ -149,6 +161,32 @@ namespace DataAccess.Repository
                         };
             return query.ToList();
 
+        }
+        public List<ListItem> getPhongGD(String maSoGD)
+        {
+
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            var query = from obj in context.PHONG_GD
+                        where obj.MA_SO_GD == maSoGD
+                        select new ListItem
+                        {
+                            MA = obj.MA,
+                            TEN = obj.TEN
+                        };
+            return query.ToList();
+        }
+        public List<ListItem> getTruong(string maPhongGD)
+        {
+
+            var context = new BO_GIAO_DUC_TEMPEntities();
+            var query = from obj in context.TRUONGs
+                        where obj.MA_PHONG_GD == maPhongGD
+                        select new ListItem
+                        {
+                            MA = obj.MA,
+                            TEN = obj.TEN
+                        };
+            return query.ToList();
         }
         public List<ListItem> getVitri()
         {

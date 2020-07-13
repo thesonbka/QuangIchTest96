@@ -28,6 +28,12 @@ namespace DataAccess.ViewModel
         public int MAUGIAOTRE5T6T { get; set; }
         public int MAUGIAOTRETEN6T { get; set; }
 
+        public string MADANTOC { get; set; }
+        public string MAGIOITINH { get; set; }
+
+        public string MALOAIHINH { get; set; }
+
+
 
 
 
