@@ -142,7 +142,7 @@ namespace DataAccess.Repository
                                     where obj.MA_TRUONG == maTruong  && context.TRUONGs.Any(p => p.MA == maTruong && p.MA_LOAI_HINH_TRUONG == "09")
                                     select 1).Count();
             treEm.TongSoDanLap = (from obj in context.HOC_SINH
-                                    where obj.MA_TRUONG == maTruong && context.TRUONGs.Any(p => p.MA == maTruong && p.MA_LOAI_HINH_TRUONG == "03")
+                                    where obj.MA_TRUONG == maTruong  && context.TRUONGs.Any(p => p.MA == maTruong && p.MA_LOAI_HINH_TRUONG == "03")
                                     select 1).Count();
             list.Add(treEm);
 
