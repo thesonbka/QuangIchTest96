@@ -25,6 +25,7 @@ namespace DataAccess
             this.TONG_KET = new HashSet<TONG_KET>();
             this.TONG_KET_C1 = new HashSet<TONG_KET_C1>();
             this.SUC_KHOE_NUOI_DUONG = new HashSet<SUC_KHOE_NUOI_DUONG>();
+            this.DIEM_TRUONG = new HashSet<DIEM_TRUONG>();
         }
     
         public decimal ID { get; set; }
@@ -109,5 +110,7 @@ namespace DataAccess
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
         public virtual DM_LOAI_HINH DM_LOAI_HINH { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DIEM_TRUONG> DIEM_TRUONG { get; set; }
     }
 }

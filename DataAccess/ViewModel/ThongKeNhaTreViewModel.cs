@@ -8,6 +8,7 @@ namespace DataAccess.ViewModel
 {
    public class ThongKeNhaTreViewModel
     {
+        public int Type { get; set; }      
         public int TongSoTotal { get; set; }
         public int TongSoCongLap { get; set; }
         public int TongSoTuThuc { get; set; }

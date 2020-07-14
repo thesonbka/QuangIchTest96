@@ -5,6 +5,25 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BO_GIAO_DUC_TEMPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DIEM_TRUONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MA_NAM_HOC" Type="int" />
+          <Property Name="MA_SO_GD" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_PHONG_GD" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID_TRUONG" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MA_TRUONG" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MA" Type="nvarchar" MaxLength="20" />
+          <Property Name="TEN" Type="nvarchar" MaxLength="250" />
+          <Property Name="DIEN_THOAI" Type="nchar" MaxLength="20" />
+          <Property Name="DIA_CHI" Type="nvarchar" MaxLength="250" />
+          <Property Name="KHOANG_CACH_DIEM_TRUONG_CHINH" Type="float" />
+          <Property Name="PHUONG_TIEN_CO_THE_DI_LAI" Type="nvarchar" MaxLength="250" />
+          <Property Name="DIEN_TICH" Type="float" />
+        </EntityType>
         <EntityType Name="DM_BAC_LUONG">
           <Key>
             <PropertyRef Name="MA" />
@@ -1597,6 +1616,54 @@
           <Property Name="IS_CO_LOP_KHONG_CHUYEN" Type="int" />
           <Property Name="IS_KY_NANG_SONG_GDXH" Type="int" />
         </EntityType>
+        <Association Name="FK_DIEM_TRUONG_NAM_HOC">
+          <End Role="NAM_HOC" Type="Self.NAM_HOC" Multiplicity="0..1" />
+          <End Role="DIEM_TRUONG" Type="Self.DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAM_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="MA_NAM_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_PHONG_GD">
+          <End Role="PHONG_GD" Type="Self.PHONG_GD" Multiplicity="0..1" />
+          <End Role="DIEM_TRUONG" Type="Self.DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG_GD">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="ID_PHONG_GD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_SO_GD">
+          <End Role="SO_GD" Type="Self.SO_GD" Multiplicity="0..1" />
+          <End Role="DIEM_TRUONG" Type="Self.DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SO_GD">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="MA_SO_GD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_TRUONG">
+          <End Role="TRUONG" Type="Self.TRUONG" Multiplicity="1" />
+          <End Role="DIEM_TRUONG" Type="Self.DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRUONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="ID_TRUONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_DM_HUYEN_DM_TINH">
           <End Role="DM_TINH" Type="Self.DM_TINH" Multiplicity="1" />
           <End Role="DM_HUYEN" Type="Self.DM_HUYEN" Multiplicity="*" />
@@ -1894,6 +1961,18 @@
             </Principal>
             <Dependent Role="HOC_SINH">
               <PropertyRef Name="ID_TRUONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_DIEM_TRUONG">
+          <End Role="DIEM_TRUONG" Type="Self.DIEM_TRUONG" Multiplicity="0..1" />
+          <End Role="LOP" Type="Self.LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIEM_TRUONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="ID_DIEM_TRUONG" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2870,6 +2949,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="BO_GIAO_DUC_TEMPModelStoreContainer">
+          <EntitySet Name="DIEM_TRUONG" EntityType="Self.DIEM_TRUONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_BAC_LUONG" EntityType="Self.DM_BAC_LUONG" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_BOI_DUONG_TX" EntityType="Self.DM_BOI_DUONG_TX" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DM_CAP_HOC" EntityType="Self.DM_CAP_HOC" Schema="dbo" store:Type="Tables" />
@@ -2938,6 +3018,22 @@
           <EntitySet Name="TONG_KET" EntityType="Self.TONG_KET" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TONG_KET_C1" EntityType="Self.TONG_KET_C1" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TRUONG" EntityType="Self.TRUONG" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_DIEM_TRUONG_NAM_HOC" Association="Self.FK_DIEM_TRUONG_NAM_HOC">
+            <End Role="NAM_HOC" EntitySet="NAM_HOC" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_PHONG_GD" Association="Self.FK_DIEM_TRUONG_PHONG_GD">
+            <End Role="PHONG_GD" EntitySet="PHONG_GD" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_SO_GD" Association="Self.FK_DIEM_TRUONG_SO_GD">
+            <End Role="SO_GD" EntitySet="SO_GD" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_TRUONG" Association="Self.FK_DIEM_TRUONG_TRUONG">
+            <End Role="TRUONG" EntitySet="TRUONG" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
           <AssociationSet Name="FK_DM_HUYEN_DM_TINH" Association="Self.FK_DM_HUYEN_DM_TINH">
             <End Role="DM_TINH" EntitySet="DM_TINH" />
             <End Role="DM_HUYEN" EntitySet="DM_HUYEN" />
@@ -3037,6 +3133,10 @@
           <AssociationSet Name="FK_HOC_SINH_TRUONG" Association="Self.FK_HOC_SINH_TRUONG">
             <End Role="TRUONG" EntitySet="TRUONG" />
             <End Role="HOC_SINH" EntitySet="HOC_SINH" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_DIEM_TRUONG" Association="Self.FK_LOP_DIEM_TRUONG">
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+            <End Role="LOP" EntitySet="LOP" />
           </AssociationSet>
           <AssociationSet Name="FK_LOP_DM_CAP_HOC" Association="Self.FK_LOP_DM_CAP_HOC">
             <End Role="DM_CAP_HOC" EntitySet="DM_CAP_HOC" />
@@ -3478,6 +3578,7 @@
           <NavigationProperty Name="TONG_KET_C1" Relationship="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_C1_LOP" FromRole="LOP" ToRole="TONG_KET_C1" />
           <NavigationProperty Name="TONG_KET" Relationship="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_LOP" FromRole="LOP" ToRole="TONG_KET" />
           <NavigationProperty Name="SUC_KHOE_NUOI_DUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_LOP" FromRole="LOP" ToRole="SUC_KHOE_NUOI_DUONG" />
+          <NavigationProperty Name="DIEM_TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_LOP_DIEM_TRUONG" FromRole="LOP" ToRole="DIEM_TRUONG" />
         </EntityType>
         <EntityType Name="LOP_MON">
           <Key>
@@ -4048,6 +4149,27 @@
           <AssociationSet Name="FK_TRUONG_DM_LOAI_HINH" Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_LOAI_HINH">
             <End Role="DM_LOAI_HINH" EntitySet="DM_LOAI_HINH" />
             <End Role="TRUONG" EntitySet="TRUONGs" />
+          </AssociationSet>
+          <EntitySet Name="DIEM_TRUONG" EntityType="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" />
+          <AssociationSet Name="FK_DIEM_TRUONG_NAM_HOC" Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_NAM_HOC">
+            <End Role="NAM_HOC" EntitySet="NAM_HOC" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_PHONG_GD" Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_PHONG_GD">
+            <End Role="PHONG_GD" EntitySet="PHONG_GD" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_SO_GD" Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_SO_GD">
+            <End Role="SO_GD" EntitySet="SO_GD" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DIEM_TRUONG_TRUONG" Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_TRUONG">
+            <End Role="TRUONG" EntitySet="TRUONGs" />
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOP_DIEM_TRUONG" Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DIEM_TRUONG">
+            <End Role="DIEM_TRUONG" EntitySet="DIEM_TRUONG" />
+            <End Role="LOP" EntitySet="LOPs" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="DM_GIOI_TINH">
@@ -4775,6 +4897,7 @@
           <NavigationProperty Name="TRUONGs" Relationship="BO_GIAO_DUC_TEMPModel.FK_TRUONG_NAM_HOC" FromRole="NAM_HOC" ToRole="TRUONG" />
           <NavigationProperty Name="DM_HUYEN" Relationship="BO_GIAO_DUC_TEMPModel.FK_DM_HUYEN_NAM_HOC" FromRole="NAM_HOC" ToRole="DM_HUYEN" />
           <NavigationProperty Name="SUC_KHOE_NUOI_DUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_NAM_HOC" FromRole="NAM_HOC" ToRole="SUC_KHOE_NUOI_DUONG" />
+          <NavigationProperty Name="DIEM_TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_NAM_HOC" FromRole="NAM_HOC" ToRole="DIEM_TRUONG" />
         </EntityType>
         <EntityType Name="NHAN_SU">
           <Key>
@@ -5003,6 +5126,7 @@
           <NavigationProperty Name="TRUONGs" Relationship="BO_GIAO_DUC_TEMPModel.FK_TRUONG_PHONG_GD" FromRole="PHONG_GD" ToRole="TRUONG" />
           <NavigationProperty Name="DM_HUYEN" Relationship="BO_GIAO_DUC_TEMPModel.FK_PHONG_GD_DM_HUYEN" FromRole="PHONG_GD" ToRole="DM_HUYEN" />
           <NavigationProperty Name="SUC_KHOE_NUOI_DUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_PHONG_GD" FromRole="PHONG_GD" ToRole="SUC_KHOE_NUOI_DUONG" />
+          <NavigationProperty Name="DIEM_TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_PHONG_GD" FromRole="PHONG_GD" ToRole="DIEM_TRUONG" />
         </EntityType>
         <EntityType Name="SO_GD">
           <Key>
@@ -5042,6 +5166,7 @@
           <NavigationProperty Name="TONG_KET" Relationship="BO_GIAO_DUC_TEMPModel.FK_TONG_KET_SO_GD" FromRole="SO_GD" ToRole="TONG_KET" />
           <NavigationProperty Name="TRUONGs" Relationship="BO_GIAO_DUC_TEMPModel.FK_TRUONG_SO_GD" FromRole="SO_GD" ToRole="TRUONG" />
           <NavigationProperty Name="SUC_KHOE_NUOI_DUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_SO_GD" FromRole="SO_GD" ToRole="SUC_KHOE_NUOI_DUONG" />
+          <NavigationProperty Name="DIEM_TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_SO_GD" FromRole="SO_GD" ToRole="DIEM_TRUONG" />
         </EntityType>
         <EntityType Name="TONG_KET">
           <Key>
@@ -5462,6 +5587,7 @@
           <NavigationProperty Name="DM_KHU_VUC" Relationship="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_KHU_VUC" FromRole="TRUONG" ToRole="DM_KHU_VUC" />
           <NavigationProperty Name="SUC_KHOE_NUOI_DUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" FromRole="TRUONG" ToRole="SUC_KHOE_NUOI_DUONG" />
           <NavigationProperty Name="DM_LOAI_HINH" Relationship="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_LOAI_HINH" FromRole="TRUONG" ToRole="DM_LOAI_HINH" />
+          <NavigationProperty Name="DIEM_TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_TRUONG" FromRole="TRUONG" ToRole="DIEM_TRUONG" />
         </EntityType>
         <Association Name="FK_HOC_SINH_DM_CAP_HOC">
           <End Type="BO_GIAO_DUC_TEMPModel.DM_CAP_HOC" Role="DM_CAP_HOC" Multiplicity="1" />
@@ -6934,6 +7060,90 @@
             </Principal>
             <Dependent Role="TRUONG">
               <PropertyRef Name="MA_LOAI_HINH_TRUONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DIEM_TRUONG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MA_NAM_HOC" Type="Int32" />
+          <Property Name="MA_SO_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PHONG_GD" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_PHONG_GD" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TRUONG" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="MA_TRUONG" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TEN" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DIEN_THOAI" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="DIA_CHI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="KHOANG_CACH_DIEM_TRUONG_CHINH" Type="Double" />
+          <Property Name="PHUONG_TIEN_CO_THE_DI_LAI" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="DIEN_TICH" Type="Double" />
+          <NavigationProperty Name="NAM_HOC" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_NAM_HOC" FromRole="DIEM_TRUONG" ToRole="NAM_HOC" />
+          <NavigationProperty Name="PHONG_GD" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_PHONG_GD" FromRole="DIEM_TRUONG" ToRole="PHONG_GD" />
+          <NavigationProperty Name="SO_GD" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_SO_GD" FromRole="DIEM_TRUONG" ToRole="SO_GD" />
+          <NavigationProperty Name="TRUONG" Relationship="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_TRUONG" FromRole="DIEM_TRUONG" ToRole="TRUONG" />
+          <NavigationProperty Name="LOPs" Relationship="BO_GIAO_DUC_TEMPModel.FK_LOP_DIEM_TRUONG" FromRole="DIEM_TRUONG" ToRole="LOP" />
+        </EntityType>
+        <Association Name="FK_DIEM_TRUONG_NAM_HOC">
+          <End Type="BO_GIAO_DUC_TEMPModel.NAM_HOC" Role="NAM_HOC" Multiplicity="0..1" />
+          <End Type="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Role="DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NAM_HOC">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="MA_NAM_HOC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_PHONG_GD">
+          <End Type="BO_GIAO_DUC_TEMPModel.PHONG_GD" Role="PHONG_GD" Multiplicity="0..1" />
+          <End Type="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Role="DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PHONG_GD">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="ID_PHONG_GD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_SO_GD">
+          <End Type="BO_GIAO_DUC_TEMPModel.SO_GD" Role="SO_GD" Multiplicity="0..1" />
+          <End Type="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Role="DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SO_GD">
+              <PropertyRef Name="MA" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="MA_SO_GD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DIEM_TRUONG_TRUONG">
+          <End Type="BO_GIAO_DUC_TEMPModel.TRUONG" Role="TRUONG" Multiplicity="1" />
+          <End Type="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Role="DIEM_TRUONG" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TRUONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DIEM_TRUONG">
+              <PropertyRef Name="ID_TRUONG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOP_DIEM_TRUONG">
+          <End Type="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Role="DIEM_TRUONG" Multiplicity="0..1" />
+          <End Type="BO_GIAO_DUC_TEMPModel.LOP" Role="LOP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DIEM_TRUONG">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="LOP">
+              <PropertyRef Name="ID_DIEM_TRUONG" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -8600,6 +8810,26 @@
                 <ScalarProperty Name="IS_MN" ColumnName="IS_MN" />
                 <ScalarProperty Name="TEN" ColumnName="TEN" />
                 <ScalarProperty Name="MA" ColumnName="MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DIEM_TRUONG">
+            <EntityTypeMapping TypeName="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG">
+              <MappingFragment StoreEntitySet="DIEM_TRUONG">
+                <ScalarProperty Name="DIEN_TICH" ColumnName="DIEN_TICH" />
+                <ScalarProperty Name="PHUONG_TIEN_CO_THE_DI_LAI" ColumnName="PHUONG_TIEN_CO_THE_DI_LAI" />
+                <ScalarProperty Name="KHOANG_CACH_DIEM_TRUONG_CHINH" ColumnName="KHOANG_CACH_DIEM_TRUONG_CHINH" />
+                <ScalarProperty Name="DIA_CHI" ColumnName="DIA_CHI" />
+                <ScalarProperty Name="DIEN_THOAI" ColumnName="DIEN_THOAI" />
+                <ScalarProperty Name="TEN" ColumnName="TEN" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+                <ScalarProperty Name="MA_TRUONG" ColumnName="MA_TRUONG" />
+                <ScalarProperty Name="ID_TRUONG" ColumnName="ID_TRUONG" />
+                <ScalarProperty Name="MA_PHONG_GD" ColumnName="MA_PHONG_GD" />
+                <ScalarProperty Name="ID_PHONG_GD" ColumnName="ID_PHONG_GD" />
+                <ScalarProperty Name="MA_SO_GD" ColumnName="MA_SO_GD" />
+                <ScalarProperty Name="MA_NAM_HOC" ColumnName="MA_NAM_HOC" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

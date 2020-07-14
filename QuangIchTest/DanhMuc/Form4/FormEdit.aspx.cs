@@ -153,7 +153,7 @@ namespace QuangIchTest.DanhMuc.Form4
                 detail.NGHE_NGHIEP_NGUOI_DD = txtNgheNgiemDoDau.Text.ToString().Trim();
             detail.MA_SO_GD = rcbSoGD.SelectedValue;
             detail.MA_CAP_HOC = "01";
-            detail.MA_TRUONG = "14150";
+            detail.MA_TRUONG = "17158304";
             detail.ID_TRUONG = 14150;
             detail.MA_NAM_HOC = 2016;
 

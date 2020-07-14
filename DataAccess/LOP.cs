@@ -99,5 +99,6 @@ namespace DataAccess
         public virtual ICollection<TONG_KET> TONG_KET { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
+        public virtual DIEM_TRUONG DIEM_TRUONG { get; set; }
     }
 }

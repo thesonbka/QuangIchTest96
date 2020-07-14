@@ -39,18 +39,22 @@ namespace QuangIchTest.DanhMuc.Form4
             rcbLop.DataBind();
            
         }
-        //protected void LoadPhongGD(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
-        //{
-        //    string maSoGD = rcbSoGD.SelectedValue;
-        //    rcbPhongGD.DataSource = resNhanSu.getPhongGD(maSoGD);
-        //    rcbPhongGD.DataBind();
-        //}
-        //protected void LoadTruong(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
-        //{
-        //    string phongGD = rcbSoGD.SelectedValue;
-        //    rcbTruong.DataSource = resNhanSu.getPhongGD(phongGD);
-        //    rcbTruong.DataBind();
-        //}
+        protected void LoadPhongGD(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            string soGD = rcbSoGD.SelectedValue;
+            rcbPhongGD.DataSource = resHocSinh.getPhongGD(soGD);
+            rcbPhongGD.DataBind();
+
+        }
+        protected void LoadTruong(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            string maPhongGD = rcbPhongGD.SelectedValue;
+            rcbTruong.DataSource = resHocSinh.getTruong(maPhongGD);
+            rcbTruong.DataBind();
+
+
+        }
+        
         protected void rcbTrangThaiHS_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
             
@@ -105,8 +109,9 @@ namespace QuangIchTest.DanhMuc.Form4
                 detail.NGHE_NGHIEP_NGUOI_DD = txtNgheNgiemDoDau.Text.ToString().Trim();
             detail.MA_SO_GD = rcbSoGD.SelectedValue;
             detail.MA_CAP_HOC = "01";
-            detail.MA_TRUONG = "14150";
-            detail.ID_TRUONG = 14150;
+            detail.MA_PHONG_GD = rcbPhongGD.SelectedValue;
+            detail.MA_TRUONG = rcbTruong.SelectedValue;
+          
             detail.MA_NAM_HOC = 2016;
             
             context.HOC_SINH.Add(detail);

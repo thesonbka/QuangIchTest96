@@ -179,6 +179,12 @@
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_SUC_KHOE_NUOI_DUONG_TRUONG" />
         <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DM_LOAI_HINH" Width="1.5" PointX="24.375" PointY="1.25" />
         <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_TRUONG_DM_LOAI_HINH" />
+        <EntityTypeShape EntityType="BO_GIAO_DUC_TEMPModel.DIEM_TRUONG" Width="1.5" PointX="27.5" PointY="34.625" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_NAM_HOC" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_PHONG_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_SO_GD" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_DIEM_TRUONG_TRUONG" />
+        <AssociationConnector Association="BO_GIAO_DUC_TEMPModel.FK_LOP_DIEM_TRUONG" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

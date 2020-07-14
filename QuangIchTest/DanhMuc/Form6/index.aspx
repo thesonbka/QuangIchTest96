@@ -82,6 +82,7 @@
         </div>
 
     </div>
+   
     <!-- do du lieu ra radgrid -->
     <telerik:RadGrid ID="RadGrid1" runat="server" AllowPaging="True" GroupPanelPosition="Top" OnNeedDataSource="RadGrid1_NeedDataSource"
         AutoGenerateColumns="False" PageSize="10" Height="550px" >

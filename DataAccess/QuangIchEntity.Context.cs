@@ -93,5 +93,6 @@ namespace DataAccess
         public virtual DbSet<DM_KENH_TANG_TRUONG_CAN_NANG> DM_KENH_TANG_TRUONG_CAN_NANG { get; set; }
         public virtual DbSet<SUC_KHOE_NUOI_DUONG> SUC_KHOE_NUOI_DUONG { get; set; }
         public virtual DbSet<DM_LOAI_HINH> DM_LOAI_HINH { get; set; }
+        public virtual DbSet<DIEM_TRUONG> DIEM_TRUONG { get; set; }
     }
 }

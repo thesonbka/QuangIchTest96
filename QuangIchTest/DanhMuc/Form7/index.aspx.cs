@@ -12,8 +12,10 @@ namespace QuangIchTest.DanhMuc.Form7
     {
         BO_GIAO_DUC_TEMPEntities context = new BO_GIAO_DUC_TEMPEntities();
         HocSinhRepository resHocSinh = new HocSinhRepository();
+        ThongkeNhaTreRepository resThongKe = new ThongkeNhaTreRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
 
         }
         protected void LoadPhongGD(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
@@ -27,9 +29,11 @@ namespace QuangIchTest.DanhMuc.Form7
         {
             string maPhongGD = rcbPhongGD.SelectedValue;
             rcbTruong.DataSource = resHocSinh.getTruong(maPhongGD);
-            rcbTruong.DataBind();
-
-
+            rcbTruong.DataBind();          
+        }
+        protected void LoadGrid(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
+        {
+            List<ThongKeNhaTreViewModel> list = resThongKe.getPageTruong(rcbTruong.SelectedValue);
         }
     }
 }

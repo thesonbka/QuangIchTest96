@@ -260,7 +260,7 @@
                     <span class="qi-name-control">Sở GD<span style="color: red">(*)</span></span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox ID="rcbSoGD" runat="server" DataSourceID="objSoGiaoDuc" DataTextField="TEN" DataValueField="MA" Width="100%"
+                    <telerik:RadComboBox ID="rcbSoGD" runat="server" DataSourceID="objSoGiaoDuc" OnSelectedIndexChanged="LoadPhongGD" DataTextField="TEN" DataValueField="MA" Width="100%"
                         EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
                     </telerik:RadComboBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="rcbSoGD"
@@ -272,41 +272,41 @@
             </div>
         </div>
 
-        <%-- <div class="col-md-6">
+          <div class="col-md-6">
             <div class="form-group">
                 <label class="col-xs-12 col-sm-4 col-md-4 control-label">
-                    <span class="qi-name-control">Phòng GD<span style="color: red">(*)</span></span>
+                    <span class="qi-name-control">Phòng GD <span style="color: red">(*)</span></span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox ID="rcbPhongGD" runat="server" OnSelectedIndexChanged="LoadTruong"  DataTextField="TEN" DataValueField="MA" Width="100%"
-                        EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
+                    <telerik:RadComboBox ID="rcbPhongGD" runat="server" OnSelectedIndexChanged="LoadTruong" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
+                        EmptyMessage="Chọn phòng GD" AllowCustomText="true" Filter="Contains">
                     </telerik:RadComboBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="rcbPhongGD"
-                        ForeColor="Red" ErrorMessage="Sở GD bắt buộc nhập" Display="Dynamic"
+
+                </div>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="rcbPhongGD"
+                        ForeColor="Red" ErrorMessage="Phòng GD bắt buộc nhập" Display="Dynamic"
                         SetFocusOnError="true"> 
                     </asp:RequiredFieldValidator>
-                  
-                </div>
             </div>
         </div>
 
-         <div class="col-md-6">
+        <div class="col-md-6">
             <div class="form-group">
                 <label class="col-xs-12 col-sm-4 col-md-4 control-label">
-                    <span class="qi-name-control">Trường<span style="color: red">(*)</span></span>
+                    <span class="qi-name-control">Trường <span style="color: red">(*)</span> </span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox ID="rcbTruong" runat="server" DataTextField="TEN" DataValueField="MA" Width="100%"
-                        EmptyMessage="Chọn sở GD" CausesValidation="false" AutoPostBack="true" AllowCustomText="true" Filter="Contains">
+                    <telerik:RadComboBox EmptyMessage="Chọn trường" ID="rcbTruong" runat="server"  DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
+                        AllowCustomText="true" Filter="Contains"  EnableLoadOnDemand="true">
                     </telerik:RadComboBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="rcbTruong"
-                        ForeColor="Red" ErrorMessage="Trường bắt buộc nhập" Display="Dynamic"
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="rcbTruong"
+                        ForeColor="Red" ErrorMessage="Phòng GD bắt buộc nhập" Display="Dynamic"
                         SetFocusOnError="true"> 
                     </asp:RequiredFieldValidator>
-                   
+
                 </div>
             </div>
-        </div>--%>
+        </div>
 
 
         <div class="col-md-6">

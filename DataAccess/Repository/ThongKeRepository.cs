@@ -17,7 +17,7 @@ namespace DataAccess.Repository
         {
             List<Form6ViewModel> listGetPage = new List<Form6ViewModel>();
             var context = new BO_GIAO_DUC_TEMPEntities();
-            List<string> listMASoGD = context.SO_GD.Select(p => p.MA).Distinct().ToList();
+            List<string> listMASoGD = context.HOC_SINH.Select(p => p.MA_SO_GD).Distinct().ToList();
             int STT = 0;
             foreach (var item in listMASoGD)
             {

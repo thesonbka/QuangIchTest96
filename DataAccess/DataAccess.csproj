@@ -70,6 +70,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DbAcessProvider.cs" />
+    <Compile Include="DIEM_TRUONG.cs">
+      <DependentUpon>QuangIchEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="DM_BAC_LUONG.cs">
       <DependentUpon>QuangIchEntity.tt</DependentUpon>
     </Compile>
