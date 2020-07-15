@@ -1011,10 +1011,7 @@ namespace DataAccess.Repository
                                             && context.TRUONGs.Any(p => p.MA == obj.MA_TRUONG && p.MA_LOAI_HINH_TRUONG == "03")
                                            select 1).Count();
             list.Add(nhanVienMauGiao);
-            maSo++;
-
-
-
+            maSo++;            
             return list;
         }
     }
