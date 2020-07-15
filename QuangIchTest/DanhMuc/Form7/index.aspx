@@ -9,7 +9,7 @@
         <AjaxSettings>
             <telerik:AjaxSetting AjaxControlID="rcbSoGD">
                 <UpdatedControls>
-                    <telerik:AjaxUpdatedControl ControlID="rcbPhongGD" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />                
+                    <telerik:AjaxUpdatedControl ControlID="rcbPhongGD" UpdatePanelCssClass="" LoadingPanelID="RadAjaxLoadingPanel1" />
                 </UpdatedControls>
             </telerik:AjaxSetting>
             <telerik:AjaxSetting AjaxControlID="rcbPhongGD">
@@ -72,8 +72,8 @@
                     <span class="qi-name-control">Chọn Trường</span>
                 </label>
                 <div class="col-xs-12 col-sm-8 col-md-8">
-                    <telerik:RadComboBox EmptyMessage="Chọn" ID="rcbTruong" runat="server" OnSelectedIndexChanged="LoadGrid"  DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
-                        AllowCustomText="true" Filter="Contains"  EnableLoadOnDemand="true">
+                    <telerik:RadComboBox EmptyMessage="Chọn" ID="rcbTruong" runat="server" OnSelectedIndexChanged="LoadGrid" DataTextField="TEN" DataValueField="MA" AutoPostBack="true" Width="100%" CausesValidation="false"
+                        AllowCustomText="true" Filter="Contains" EnableLoadOnDemand="true">
                     </telerik:RadComboBox>
 
                 </div>
@@ -82,50 +82,42 @@
 
     </div>
 
-        <telerik:RadGrid ID="RadGrid1" runat="server" AllowPaging="True" GroupPanelPosition="Top" 
-        AutoGenerateColumns="False" PageSize="10" Height="550px" >
-        <ClientSettings>
-            <Scrolling AllowScroll="True" UseStaticHeaders="True" SaveScrollPosition="true"></Scrolling>
-        </ClientSettings>
-        <MasterTableView HorizontalAlign="NotSet" AutoGenerateColumns="False">
-            <NoRecordsTemplate>
-                Không có bản ghi nào!
-            </NoRecordsTemplate>
-            <HeaderStyle CssClass="qi-head-list-grid" HorizontalAlign="Center" />
-         
-            <Columns>
-                <telerik:GridBoundColumn DataField="STT" HeaderStyle-Width="40px" HeaderText="STT" SortExpression="STT"
-                        UniqueName="STT">
-                    </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="150px" DataField="TENSOGIAODUC" FilterControlAltText="Filter LOP column" HeaderText="Chỉ Tiêu" SortExpression="TENSOGIAODUC" UniqueName="TENSOGIAODUC" ItemStyle-HorizontalAlign="Left">
+    <telerik:RadGrid ID="RadGrid1" runat="server" AllowPaging="True" GroupPanelPosition="Top" OnNeedDataSource="RadGrid1_NeedDataSource"
+    AutoGenerateColumns="False" PageSize="100" Height="550px" >
+    <ClientSettings>
+        <Scrolling AllowScroll="True" UseStaticHeaders="True" SaveScrollPosition="true"></Scrolling>
+    </ClientSettings>
+    <MasterTableView HorizontalAlign="NotSet" AutoGenerateColumns="False">
+        <NoRecordsTemplate>
+            Không có bản ghi nào!
+        </NoRecordsTemplate>
+        <HeaderStyle CssClass="qi-head-list-grid" HorizontalAlign="Center" />
+       
+        <Columns>
+            <telerik:GridBoundColumn DataField="TT" HeaderStyle-Width="40px" HeaderText="TT" SortExpression="STT"
+                    UniqueName="STT" ItemStyle-HorizontalAlign="Left">
                 </telerik:GridBoundColumn>
+              <telerik:GridBoundColumn DataField="CHITIEU"  HeaderStyle-Width="200px" HeaderText="Chỉ tiêu" SortExpression="CHITIEU"
+                    UniqueName="CHITIEU" ItemStyle-HorizontalAlign="Left">
+                </telerik:GridBoundColumn>
+            <telerik:GridBoundColumn HeaderStyle-Width="150px"  DataField="DONVITINH" FilterControlAltText="Filter LOP column" HeaderText="Đơn vị tính" SortExpression="DONVITINH" UniqueName="DONVITINH" ItemStyle-HorizontalAlign="Center" >
+            </telerik:GridBoundColumn>
 
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT" DataField="NHATRETONGSOHOCSINH" FilterControlAltText="Filter NT_TONG_SO column" HeaderText="Tổng số" SortExpression="NT_TONG_SO" UniqueName="NT_TONG_SO" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE3TO12" FilterControlAltText="Filter NT_3_12 column" HeaderText="Trẻ 3 - 12 tháng" SortExpression="NT_3_12" UniqueName="NT_3_12" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE13TO24" FilterControlAltText="Filter NT_13_24 column" HeaderText="Trẻ 13 - 24 tháng" SortExpression="NT_13_24" UniqueName="NT_13_24" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE25TO36" FilterControlAltText="Filter NT_25_36 column" HeaderText="Trẻ 25 - 36 tháng" SortExpression="NT_25_36" UniqueName="NT_25_36" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="NT_TD" DataField="NHATRE36TO" FilterControlAltText="Filter NT_36 column" HeaderText="Trẻ từ 36 tháng trở lên" SortExpression="NT_36" UniqueName="NT_36" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
+            <telerik:GridBoundColumn HeaderStyle-Width="70px"  DataField="MASO" FilterControlAltText="Filter NT_TONG_SO column" HeaderText="Mã Số" SortExpression="MASO" UniqueName="MASO" ItemStyle-HorizontalAlign="Center">
+            </telerik:GridBoundColumn>
+            
+            <telerik:GridBoundColumn HeaderStyle-Width="70px"  DataField="TongSoTotal" FilterControlAltText="Filter NT_13_24 column" HeaderText="Tổng số" SortExpression="TongSoTotal" UniqueName="TongSoTotal" ItemStyle-HorizontalAlign="Center">
+            </telerik:GridBoundColumn>
+            <telerik:GridBoundColumn HeaderStyle-Width="70px"  DataField="TongSoCongLap" FilterControlAltText="Filter NT_25_36 column" HeaderText="Công lập" SortExpression="TongSoCongLap" UniqueName="TongSoCongLap" ItemStyle-HorizontalAlign="Center">
+            </telerik:GridBoundColumn>
+            <telerik:GridBoundColumn HeaderStyle-Width="70px" DataField="TongSoCongLap" FilterControlAltText="Filter NT_36 column" HeaderText="Tư thục" SortExpression="NT_36" UniqueName="TongSoCongLap" ItemStyle-HorizontalAlign="Center">
+            </telerik:GridBoundColumn>
 
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG" DataField="MAUGIAOTONGSOHOCSINH" FilterControlAltText="Filter MG_TONG_SO column" HeaderText="Tổng số" SortExpression="MG_TONG_SO" UniqueName="MG_TONG_SO" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTREDUOI3T" FilterControlAltText="Filter MG_3 column" HeaderText="Trẻ dưới 3 tuổi" SortExpression="MG_3" UniqueName="MG_3" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE3TO4T" FilterControlAltText="Filter MG_3_4 column" HeaderText="Trẻ 3 - 4 tuổi" SortExpression="MG_3_4" UniqueName="MG_3_4" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE4T5T" FilterControlAltText="Filter MG_4_5 column" HeaderText="Trẻ 4 - 5 tuổi" SortExpression="MG_4_5" UniqueName="MG_4_5" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRE5T6T" FilterControlAltText="Filter MG_5_6 column" HeaderText="Trẻ 5 - 6 tuổi" SortExpression="MG_5_6" UniqueName="MG_5_6" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
-                <telerik:GridBoundColumn HeaderStyle-Width="70px" ColumnGroupName="MG_TD" DataField="MAUGIAOTRETEN6T" FilterControlAltText="Filter MG_6 column" HeaderText="Trẻ trên 6 tuổi" SortExpression="MG_6" UniqueName="MG_6" ItemStyle-HorizontalAlign="Right">
-                </telerik:GridBoundColumn>
+            <telerik:GridBoundColumn HeaderStyle-Width="70px"  DataField="TongSoDanLap" FilterControlAltText="Filter MG_TONG_SO column" HeaderText="Dân lập" SortExpression="TongSoDanLap" UniqueName="TongSoDanLap" ItemStyle-HorizontalAlign="Center">
+            </telerik:GridBoundColumn>              
+        </Columns>           
+    </MasterTableView>
+          </telerik:RadGrid>
 
-            </Columns>
-           
-        </MasterTableView>
-    </telerik:RadGrid>
+   
 </asp:Content>

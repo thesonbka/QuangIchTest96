@@ -33,7 +33,22 @@ namespace QuangIchTest.DanhMuc.Form7
         }
         protected void LoadGrid(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
         {
-            List<ThongKeNhaTreViewModel> list = resThongKe.getPageTruong(rcbTruong.SelectedValue);
+            RadGrid1.Rebind();
+        }
+        protected void RadGrid1_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(rcbTruong.SelectedValue))
+            {
+                List<ThongKeNhaTreViewModel> list = resThongKe.getPageTruong(rcbTruong.SelectedValue);
+                RadGrid1.DataSource = list;
+            }
+            else
+            {
+                RadGrid1.DataSource = null;
+            }
+            
+
+
         }
     }
 }

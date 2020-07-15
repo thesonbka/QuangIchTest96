@@ -17,14 +17,14 @@ namespace DataAccess.Repository
         {
             List<Form6ViewModel> listGetPage = new List<Form6ViewModel>();
             var context = new BO_GIAO_DUC_TEMPEntities();
-            List<string> listMASoGD = context.HOC_SINH.Select(p => p.MA_SO_GD).Distinct().ToList();
+            List<string> listMASoGD = context.HOC_SINH.Where(p=>p.MA_SO_GD !=null).Select(p => p.MA_SO_GD).Distinct().ToList();
             int STT = 0;
             foreach (var item in listMASoGD)
             {
                 STT++;
                 Form6ViewModel detail = new Form6ViewModel();
                 detail.STT = STT.ToString();
-                detail.TENSOGIAODUC = context.SO_GD.FirstOrDefault(p => p.MA == item).TEN;
+                detail.TENSOGIAODUC = context.SO_GD.Where(p => p.MA == item).Select(p=>p.TEN).FirstOrDefault();
 
                 detail.NHATRETONGSOHOCSINH = context.HOC_SINH.Where(p => p.MA_CAP_HOC == "01" && p.MA_KHOI == "16" && p.MA_SO_GD==item && (string.IsNullOrEmpty(danToc)||p.MA_DAN_TOC==danToc) && (string.IsNullOrEmpty(gioiTinh) || p.MA_GIOI_TINH==gioiTinh) &&((string.IsNullOrEmpty(loaiHinh) || context.TRUONGs.Any(k => k.ID == p.ID_TRUONG && k.MA_LOAI_HINH_TRUONG==loaiHinh)))).Count();
 

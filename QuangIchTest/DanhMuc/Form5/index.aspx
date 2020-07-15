@@ -170,7 +170,7 @@
                     <telerik:GridTemplateColumn DataField="CANNANG" HeaderText="Cân nặng" UniqueName="CANNANG">
                         <ItemTemplate>
                            
-                            <telerik:RadNumericTextBox Width="80px" Value='<%# Eval("CANNANG") %>' ID="txtCanNang" runat="server" CssClass="form-control" MinValue="0" MaxValue="100" >
+                            <telerik:RadNumericTextBox Width="80px" Value='<%# Eval("CANNANG") %>' ID="txtCanNang" runat="server" CssClass="form-control" MinValue="0" >
                                 <NumberFormat GroupSeparator="" DecimalDigits="2" /> 
                             </telerik:RadNumericTextBox>
                             <span> Kg</span>
@@ -180,7 +180,7 @@
                     <telerik:GridTemplateColumn DataField="CHIEUCAO" HeaderText="Chiều cao" UniqueName="CHIEUCAO">
                         <ItemTemplate>
                             
-                            <telerik:RadNumericTextBox Value='<%# Eval("CHIEUCAO") %>' ID="txtCHIEUCAO" Width="80px" runat="server" CssClass="form-control" MinValue="0" MaxValue="100">
+                            <telerik:RadNumericTextBox Value='<%# Eval("CHIEUCAO") %>' ID="txtCHIEUCAO" Width="80px" runat="server" CssClass="form-control" MinValue="0" >
                                 <NumberFormat GroupSeparator="" DecimalDigits="2" />
                             </telerik:RadNumericTextBox>
                               <span> m</span>
